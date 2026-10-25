@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><!-- TODO: Họ Tên Bạn --> — Portfolio</title>
+
+  <!-- Favicon (tuỳ chọn) -->
+  <!-- <link rel="icon" href="./assets/images/favicon.ico" /> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       CUSTOM CURSOR (Sáng tạo — tiêu chí 19, tuỳ chọn)
+  ============================================================ -->
+  <div id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div id="loading-screen" role="status" aria-label="Đang tải...">
+    <div id="loading-lottie">
+      <!-- TODO: Lottie loading animation -->
+      <div class="loading-spinner"></div>
+    </div>
+    <p class="loading-text">Đang tải...</p>
+  </div>
+
+  <!-- ============================================================
+       SCROLL PROGRESS BAR (Sáng tạo — tiêu chí 19, tuỳ chọn)
+  ============================================================ -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       SECTION 1: HEADER / NAVBAR (Tiêu chí #1)
+  ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="navbar__container" aria-label="Điều hướng chính">
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo" aria-label="Trang chủ">
+        <!-- TODO: Thay "XX" bằng chữ tắt tên bạn, VD: "NK" -->
+        <span>XX</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="navbar__menu" role="list">
+        <li><a href="#about" class="navbar__link">Giới thiệu</a></li>
+        <li><a href="#skills" class="navbar__link">Kỹ năng</a></li>
+        <li><a href="#experience" class="navbar__link">Kinh nghiệm</a></li>
+        <li><a href="#projects" class="navbar__link">Dự án</a></li>
+        <li><a href="#contact" class="navbar__link">Liên hệ</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="navbar__actions">
+        <!-- Dark Mode Toggle (Tiêu chí #14) -->
+        <button class="btn-darkmode" id="darkmode-toggle" aria-label="Chuyển chế độ tối/sáng" title="Chế độ tối/sáng">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+
+        <!-- Hamburger (Mobile) -->
+        <button class="navbar__hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="navbar__mobile" id="mobile-menu" role="navigation" aria-label="Menu di động">
+      <ul role="list">
+        <li><a href="#about" class="navbar__link">Giới thiệu</a></li>
+        <li><a href="#skills" class="navbar__link">Kỹ năng</a></li>
+        <li><a href="#experience" class="navbar__link">Kinh nghiệm</a></li>
+        <li><a href="#projects" class="navbar__link">Dự án</a></li>
+        <li><a href="#contact" class="navbar__link">Liên hệ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         SECTION 2: HERO / BANNER (Tiêu chí #1, #2)
+    ============================================================ -->
+    <section class="section hero" id="hero" aria-label="Giới thiệu">
+      <div class="container hero__container">
+        <!-- Text bên trái -->
+        <div class="hero__text">
+          <p class="hero__greeting">Xin chào, tôi là 👋</p>
+          <h1 class="hero__name">
+            <!-- TODO: Thay bằng họ tên thật của bạn -->
+            Họ Tên Bạn
+          </h1>
+          <h2 class="hero__role">
+            <!-- TODO: Thay bằng các vai trò của bạn (Typed.js sẽ gõ tự động) -->
+            <span id="typed-role"></span>
+          </h2>
+          <p class="hero__bio">
+            <!-- TODO: 2-3 câu giới thiệu ngắn về bản thân -->
+            Đây là đoạn giới thiệu ngắn về bản thân bạn. Hãy thay thế bằng nội dung thật sự của bạn, nêu bật điểm mạnh và định hướng của bạn.
+          </p>
+          <div class="hero__cta">
+            <a href="#projects" class="btn btn--primary">Xem dự án</a>
+            <a href="#contact" class="btn btn--outline">Liên hệ tôi</a>
+          </div>
+        </div>
+
+        <!-- Lottie / Hình ảnh bên phải -->
+        <div class="hero__visual">
+          <!-- TODO: Thay bằng Lottie animation thật (download JSON về ./assets/animations/) -->
+          <div id="hero-lottie" class="lottie-container" aria-hidden="true">
+            <!-- Fallback nếu chưa có Lottie JSON -->
+            <div class="lottie-fallback">
+              <div class="lottie-fallback__circle"></div>
+              <span class="lottie-fallback__emoji">💻</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="hero__scroll-indicator" aria-label="Cuộn xuống">
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3: ABOUT / GIỚI THIỆU BẢN THÂN (Tiêu chí #2, #3)
+    ============================================================ -->
+    <section class="section about" id="about" aria-label="Về tôi">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Về tôi</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">Một chút về bản thân và mục tiêu của tôi</p>
+
+        <div class="about__grid">
+          <!-- Ảnh đại diện -->
+          <div class="about__image-wrap" data-aos="fade-right">
+            <!-- TODO: Thay src bằng ảnh đại diện thật của bạn (400x400px, nền trơn) -->
+            <div class="about__avatar-placeholder" aria-label="Ảnh đại diện">
+              <span>👤</span>
+            </div>
+            <!-- Khi có ảnh thật, xoá placeholder trên và bỏ comment dòng dưới: -->
+            <!-- <img src="./assets/images/avatar.jpg" alt="Ảnh đại diện của [Tên bạn]" class="about__avatar" /> -->
+          </div>
+
+          <!-- Nội dung -->
+          <div class="about__content" data-aos="fade-left" data-aos-delay="100">
+            <!-- Thông tin cơ bản -->
+            <div class="about__info">
+              <div class="about__info-item">
+                <span class="about__info-label">🎓 Trường:</span>
+                <!-- TODO: Thay tên trường -->
+                <span>Tên trường đại học của bạn</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">📚 Ngành:</span>
+                <!-- TODO: Thay ngành học -->
+                <span>Ngành học của bạn</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">📅 Năm học:</span>
+                <!-- TODO: Thay năm học -->
+                <span>Năm X (20XX–nay)</span>
+              </div>
+              <div class="about__info-item">
+                <span class="about__info-label">🎯 Định hướng:</span>
+                <!-- TODO: Thay định hướng nghề nghiệp -->
+                <span>Vị trí bạn muốn làm</span>
+              </div>
+            </div>
+
+            <!-- GPA Stats (tuỳ chọn) -->
+            <div class="about__stats">
+              <div class="about__stat-item">
+                <span class="about__stat-label">GPA</span>
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar__fill" data-percent="75">
+                    <!-- TODO: Đổi data-percent thành % GPA của bạn (VD: GPA 3.02/4.0 = 75.5%) -->
+                  </div>
+                </div>
+                <!-- TODO: Thay X.XX/4.00 -->
+                <span class="about__stat-value">X.XX / 4.00</span>
+              </div>
+            </div>
+
+            <!-- Giới thiệu chi tiết -->
+            <div class="about__description">
+              <!-- TODO: Thay bằng đoạn giới thiệu đầy đủ của bạn (3-5 câu) -->
+              <p>Đây là phần giới thiệu đầy đủ về bản thân bạn. Nêu rõ bạn là ai, học gì, có đam mê gì với lĩnh vực công nghệ, và điểm mạnh của bạn là gì.</p>
+            </div>
+
+            <!-- Mục tiêu nghề nghiệp (Tiêu chí #3) -->
+            <div class="about__goal">
+              <h3>🎯 Mục tiêu nghề nghiệp</h3>
+              <!-- TODO: Thay bằng mục tiêu ngắn hạn và dài hạn của bạn -->
+              <p><strong>Ngắn hạn:</strong> Mục tiêu của bạn trong 1-2 năm tới (VD: tìm việc thực tập, nâng cao kỹ năng...).</p>
+              <p><strong>Dài hạn:</strong> Mục tiêu của bạn trong 3-5 năm tới (VD: trở thành senior developer, xây dựng sản phẩm riêng...).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4: KỸ NĂNG (Tiêu chí #4, #12)
+    ============================================================ -->
+    <section class="section skills" id="skills" aria-label="Kỹ năng">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Kỹ năng</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">Các công nghệ tôi đang sử dụng</p>
+
+        <div class="skills__grid">
+          <!-- TODO: Thêm/xoá/sửa các skill card theo kỹ năng thật của bạn -->
+          <!-- Mức độ: beginner / intermediate / advanced -->
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
+            <div class="skill-card__icon">
+              <!-- TODO: Thay emoji bằng icon/Lottie phù hợp với kỹ năng -->
+              ☕
+            </div>
+            <h3 class="skill-card__name">
+              <!-- TODO: Tên kỹ năng -->
+              Kỹ năng 1
+            </h3>
+            <span class="skill-card__level skill-card__level--intermediate">
+              <!-- TODO: beginner / intermediate / advanced -->
+              Intermediate
+            </span>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="skill-card__icon">🗄️</div>
+            <h3 class="skill-card__name">Kỹ năng 2</h3>
+            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="skill-card__icon">⚙️</div>
+            <h3 class="skill-card__name">Kỹ năng 3</h3>
+            <span class="skill-card__level skill-card__level--advanced">Advanced</span>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="skill-card__icon">🌐</div>
+            <h3 class="skill-card__name">Kỹ năng 4</h3>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+            <div class="skill-card__icon">🐙</div>
+            <h3 class="skill-card__name">Kỹ năng 5</h3>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="skill-card__icon">🐳</div>
+            <h3 class="skill-card__name">Kỹ năng 6</h3>
+            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+          </div>
+
+          <!-- TODO: Thêm skill card nếu cần -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5: HỌC VẤN / KINH NGHIỆM / HOẠT ĐỘNG (Tiêu chí #5)
+         + TABS (Tiêu chí #14)
+    ============================================================ -->
+    <section class="section experience" id="experience" aria-label="Kinh nghiệm">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Quá trình</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">Học vấn, kinh nghiệm và hoạt động của tôi</p>
+
+        <!-- Tab buttons -->
+        <div class="tabs" role="tablist" aria-label="Phân loại kinh nghiệm" data-aos="fade-up" data-aos-delay="200">
+          <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" aria-controls="tab-education" id="btn-education">
+            🎓 Học vấn
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-experience" id="btn-experience">
+            💼 Kinh nghiệm
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-activities" id="btn-activities">
+            🌟 Hoạt động
+          </button>
+        </div>
+
+        <!-- Tab: Học vấn -->
+        <div class="tab-panel tab-panel--active" id="tab-education" role="tabpanel" aria-labelledby="btn-education">
+          <div class="timeline">
+            <div class="timeline__item" data-aos="fade-right">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__period">
+                  <!-- TODO: Thay năm -->
+                  20XX – nay
+                </span>
+                <h3 class="timeline__title">
+                  <!-- TODO: Tên trường -->
+                  Tên trường đại học
+                </h3>
+                <p class="timeline__subtitle">
+                  <!-- TODO: Ngành học -->
+                  Ngành: Tên ngành học
+                </p>
+                <p class="timeline__desc">
+                  <!-- TODO: GPA hoặc thành tích -->
+                  GPA: X.XX / 4.00
+                </p>
+              </div>
+            </div>
+            <!-- TODO: Thêm các mốc học vấn khác nếu có -->
+          </div>
+        </div>
+
+        <!-- Tab: Kinh nghiệm -->
+        <div class="tab-panel" id="tab-experience" role="tabpanel" aria-labelledby="btn-experience" hidden>
+          <div class="timeline">
+            <!-- TODO: Thêm kinh nghiệm làm việc của bạn -->
+            <!-- Nếu chưa có, giữ nguyên card dưới đây -->
+            <div class="timeline__item timeline__item--empty" data-aos="fade-right">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__period">Hiện tại</span>
+                <h3 class="timeline__title">Đang tìm kiếm cơ hội thực tập</h3>
+                <p class="timeline__desc">Tôi đang tích cực tìm kiếm vị trí thực tập để tích lũy kinh nghiệm thực tế.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Hoạt động -->
+        <div class="tab-panel" id="tab-activities" role="tabpanel" aria-labelledby="btn-activities" hidden>
+          <div class="timeline">
+            <!-- TODO: Thêm hoạt động CLB, tình nguyện... -->
+            <div class="timeline__item timeline__item--empty" data-aos="fade-right">
+              <div class="timeline__dot"></div>
+              <div class="timeline__content">
+                <span class="timeline__period">Đang cập nhật</span>
+                <h3 class="timeline__title">Hoạt động ngoại khoá</h3>
+                <p class="timeline__desc">
+                  <!-- TODO: Thêm hoạt động CLB, tình nguyện, cuộc thi... -->
+                  Phần này đang được cập nhật.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6: DỰ ÁN CÁ NHÂN (Tiêu chí #6, #14)
+         + Swiper + Filter + Modal
+    ============================================================ -->
+    <section class="section projects" id="projects" aria-label="Dự án">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Dự án</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">Những dự án tôi đã thực hiện</p>
+
+        <!-- Filter buttons (Tiêu chí #14) -->
+        <div class="projects__filter" role="group" aria-label="Lọc dự án" data-aos="fade-up" data-aos-delay="200">
+          <button class="filter-btn filter-btn--active" data-filter="all">Tất cả</button>
+          <!-- TODO: Thêm các tag phù hợp với công nghệ của bạn -->
+          <button class="filter-btn" data-filter="tag1">Tag 1</button>
+          <button class="filter-btn" data-filter="tag2">Tag 2</button>
+          <button class="filter-btn" data-filter="tag3">Tag 3</button>
+        </div>
+
+        <!-- Swiper Carousel -->
+        <div class="swiper projects-swiper" data-aos="fade-up" data-aos-delay="300">
+          <div class="swiper-wrapper">
+
+            <!-- ===== PROJECT CARD 1 ===== -->
+            <!-- TODO: Thay data-tech bằng tag công nghệ của dự án (phải khớp với filter-btn data-filter) -->
+            <div class="swiper-slide" data-tech="tag1 tag2">
+              <div class="project-card">
+                <!-- Ảnh dự án -->
+                <div class="project-card__image">
+                  <!-- TODO: Thay src bằng ảnh screenshot dự án thật (tỉ lệ 16:9) -->
+                  <div class="project-card__image-placeholder">🖥️</div>
+                  <!-- <img src="./assets/images/project-1.png" alt="Ảnh dự án [Tên dự án]" /> -->
+                </div>
+                <!-- Nội dung -->
+                <div class="project-card__body">
+                  <h3 class="project-card__title">
+                    <!-- TODO: Tên dự án 1 -->
+                    Tên Dự Án 1
+                  </h3>
+                  <p class="project-card__desc">
+                    <!-- TODO: Mô tả 2 câu về dự án -->
+                    Mô tả ngắn về dự án của bạn. Nêu vấn đề giải quyết và kết quả đạt được.
+                  </p>
+                  <div class="project-card__tags">
+                    <!-- TODO: Thêm tech tags -->
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                  </div>
+                  <button class="btn btn--primary project-card__detail-btn"
+                          data-project="project-1"
+                          aria-haspopup="dialog"
+                          aria-label="Xem chi tiết dự án Tên Dự Án 1">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===== PROJECT CARD 2 ===== -->
+            <div class="swiper-slide" data-tech="tag2 tag3">
+              <div class="project-card">
+                <div class="project-card__image">
+                  <div class="project-card__image-placeholder">📱</div>
+                </div>
+                <div class="project-card__body">
+                  <h3 class="project-card__title">Tên Dự Án 2</h3>
+                  <p class="project-card__desc">Mô tả ngắn về dự án thứ hai của bạn.</p>
+                  <div class="project-card__tags">
+                    <span class="tag">Tag2</span>
+                    <span class="tag">Tag3</span>
+                  </div>
+                  <button class="btn btn--primary project-card__detail-btn"
+                          data-project="project-2"
+                          aria-haspopup="dialog"
+                          aria-label="Xem chi tiết dự án Tên Dự Án 2">
+                    Xem chi tiết
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- TODO: Thêm dự án nếu có -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next" aria-label="Dự án tiếp theo"></div>
+          <div class="swiper-button-prev" aria-label="Dự án trước"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal chi tiết dự án (Tiêu chí #14) -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Chi tiết dự án" hidden>
+      <div class="modal">
+        <button class="modal__close" id="modal-close" aria-label="Đóng">✕</button>
+
+        <!-- Lottie confetti (tuỳ chọn) -->
+        <div id="modal-confetti" class="modal__confetti" aria-hidden="true"></div>
+
+        <div class="modal__image">
+          <div class="modal__image-placeholder" id="modal-img-placeholder">🖥️</div>
+          <!-- <img id="modal-img" src="" alt="" /> -->
+        </div>
+        <div class="modal__body">
+          <h3 class="modal__title" id="modal-title">Tên Dự Án</h3>
+          <p class="modal__desc" id="modal-desc">Mô tả đầy đủ về dự án.</p>
+          <div class="modal__tags" id="modal-tags"></div>
+          <div class="modal__links" id="modal-links">
+            <a href="#" class="btn btn--outline" id="modal-github" target="_blank" rel="noopener noreferrer">
+              🐙 GitHub
+            </a>
+            <a href="#" class="btn btn--primary" id="modal-demo" target="_blank" rel="noopener noreferrer">
+              🌐 Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         SECTION 7: CHỨNG CHỈ & LIÊN HỆ (Tiêu chí #7, #15)
+    ============================================================ -->
+
+    <!-- Chứng chỉ / Giải thưởng / Sở thích (Tiêu chí #7) -->
+    <section class="section certificates" id="certificates" aria-label="Chứng chỉ">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Chứng chỉ & Sở thích</h2>
+
+        <div class="certificates__grid">
+          <!-- TODO: Thêm chứng chỉ thật nếu có -->
+          <!-- Nếu chưa có, giữ card dưới đây -->
+          <div class="cert-card" data-aos="zoom-in">
+            <div class="cert-card__icon">📜</div>
+            <p class="cert-card__name">Chưa có chứng chỉ</p>
+            <p class="cert-card__issuer">Đang cập nhật</p>
+          </div>
+
+          <!-- Ví dụ khi có chứng chỉ:
+          <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="cert-card__icon">🏆</div>
+            <p class="cert-card__name">Tên chứng chỉ</p>
+            <p class="cert-card__issuer">Nơi cấp — Năm</p>
+          </div>
+          -->
+        </div>
+
+        <!-- Sở thích -->
+        <div class="hobbies" data-aos="fade-up">
+          <h3 class="hobbies__title">Sở thích</h3>
+          <div class="hobbies__list">
+            <!-- TODO: Thêm sở thích của bạn -->
+            <span class="hobby-tag">🎮 Gaming</span>
+            <span class="hobby-tag">📚 Đọc sách</span>
+            <span class="hobby-tag">🎵 Nghe nhạc</span>
+            <!-- Thêm sở thích khác ở đây -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Liên hệ (Tiêu chí #15) -->
+    <section class="section contact" id="contact" aria-label="Liên hệ">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Liên hệ</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">Hãy kết nối với tôi!</p>
+
+        <div class="contact__grid">
+          <!-- Thông tin liên hệ -->
+          <div class="contact__info" data-aos="fade-right">
+            <div class="contact__info-item">
+              <span class="contact__icon">📧</span>
+              <div>
+                <p class="contact__label">Email</p>
+                <!-- TODO: Thay email thật của bạn -->
+                <a href="mailto:email@example.com" class="contact__value">email@example.com</a>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <span class="contact__icon">🐙</span>
+              <div>
+                <p class="contact__label">GitHub</p>
+                <!-- TODO: Thay link GitHub thật -->
+                <a href="https://github.com/username" class="contact__value" target="_blank" rel="noopener noreferrer">github.com/username</a>
+              </div>
+            </div>
+            <!-- TODO: Thêm LinkedIn, Facebook nếu muốn -->
+          </div>
+
+          <!-- Form (Tiêu chí #15) -->
+          <form class="contact-form" id="contact-form" novalidate data-aos="fade-left" data-aos-delay="100">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Họ và tên <span aria-hidden="true">*</span></label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="Nhập họ và tên" required autocomplete="name" />
+              <span class="form-error" id="error-name" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="Nhập địa chỉ email" required autocomplete="email" />
+              <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Chủ đề</label>
+              <select id="form-subject" name="subject" class="form-input form-select">
+                <option value="">-- Chọn chủ đề --</option>
+                <option value="collaboration">Hợp tác dự án</option>
+                <option value="internship">Cơ hội thực tập</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Nội dung <span aria-hidden="true">*</span></label>
+              <textarea id="form-message" name="message" class="form-input form-textarea" placeholder="Nhập nội dung tin nhắn (tối thiểu 10 ký tự)" required minlength="10" rows="5"></textarea>
+              <span class="form-error" id="error-message" role="alert" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit" id="form-submit-btn">
+              <span class="btn-text">Gửi tin nhắn ✉️</span>
+              <span class="btn-loading" hidden>Đang gửi...</span>
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div class="contact-success" id="contact-success" hidden aria-live="polite">
+            <div id="success-lottie" class="lottie-container">
+              <div class="lottie-fallback">
+                <span class="lottie-fallback__emoji">✅</span>
+              </div>
+            </div>
+            <h3>Gửi thành công!</h3>
+            <p>Cảm ơn bạn đã liên hệ. Tôi sẽ phản hồi sớm nhất có thể!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__container">
+      <p class="footer__copy">
+        <!-- TODO: Thay tên bạn -->
+        &copy; 2024 Họ Tên Bạn. Made with ❤️
+      </p>
+      <div class="footer__links">
+        <a href="#hero" class="footer__link" aria-label="Về đầu trang">↑ Lên đầu</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       PROJECT DATA (TODO: Cập nhật data dự án của bạn)
+  ============================================================ -->
+  <script>
+    // TODO: Thay thông tin dự án thật của bạn vào đây
+    window.PROJECTS_DATA = {
+      'project-1': {
+        title: 'Tên Dự Án 1',
+        desc: 'Mô tả đầy đủ về dự án 1 của bạn. Nêu rõ vấn đề giải quyết, công nghệ sử dụng, và kết quả đạt được.',
+        tags: ['Tag1', 'Tag2'],
+        github: 'https://github.com/username/repo1',
+        demo: '#', // Nếu không có live demo, để '#'
+        image: './assets/images/project-1.png',
+        emoji: '🖥️'
+      },
+      'project-2': {
+        title: 'Tên Dự Án 2',
+        desc: 'Mô tả đầy đủ về dự án 2 của bạn.',
+        tags: ['Tag2', 'Tag3'],
+        github: 'https://github.com/username/repo2',
+        demo: '#',
+        image: './assets/images/project-2.png',
+        emoji: '📱'
+      }
+    };
+
+    // TODO: Thay các vai trò của bạn (Typed.js sẽ gõ tự động)
+    window.TYPED_STRINGS = [
+      'Vai trò 1',
+      'Vai trò 2',
+      'Vai trò 3'
+    ];
+  </script>
+
+  <!-- ============================================================
+       CDN LIBRARIES
+  ============================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

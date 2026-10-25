@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profio — Next-Gen Portfolio Network của 5 sinh viên CNTT UTH với hiệu ứng tương tác 3D WebGL và giao diện Futuristic Cyber Tech." />
+  <title>Profio — Next-Gen Tech Portfolio Network</title>
+
+  <!-- Google Fonts: Space Grotesk + JetBrains Mono + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS Scroll Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/landing.css" />
+
+  <!-- Dark mode: chạy NGAY trước render để tránh flash (mặc định dark mode cho phong cách Cyber Tech) -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('profio-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cyber Reticle Cursor -->
+  <div id="cyber-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring">
+      <svg class="cursor-reticle" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="reticle-bracket" d="M 8 14 L 8 8 L 14 8" stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round"/>
+        <path class="reticle-bracket" d="M 26 8 L 32 8 L 32 14" stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round"/>
+        <path class="reticle-bracket" d="M 32 26 L 32 32 L 26 32" stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round"/>
+        <path class="reticle-bracket" d="M 14 32 L 8 32 L 8 26" stroke="#00f2fe" stroke-width="1.8" stroke-linecap="round"/>
+        <circle class="reticle-circle" cx="20" cy="20" r="10" stroke="#00f2fe" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+        <line x1="20" y1="2" x2="20" y2="6" stroke="#00f2fe" stroke-width="1.5"/>
+        <line x1="20" y1="34" x2="20" y2="38" stroke="#00f2fe" stroke-width="1.5"/>
+        <line x1="2" y1="20" x2="6" y2="20" stroke="#00f2fe" stroke-width="1.5"/>
+        <line x1="34" y1="20" x2="38" y2="20" stroke="#00f2fe" stroke-width="1.5"/>
+      </svg>
+      <span class="cursor-label"></span>
+    </div>
+  </div>
+
+  <!-- Cyber Pulse click container -->
+  <div id="cyber-pulse-container" aria-hidden="true"></div>
+
+  <!-- ===================================================
+       NAVBAR (FROSTED CYBER HUD)
+  =================================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <nav class="navbar__inner" aria-label="Điều hướng chính">
+      <a href="#hero" class="navbar__brand" aria-label="Profio trang chủ">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">Profio</span>
+        <span class="brand-tag">v3.0_CYBER</span>
+      </a>
+
+      <div class="navbar__actions">
+        <div class="navbar__status-pill" aria-hidden="true">
+          <span class="status-dot"></span>
+          <span>SYSTEM ONLINE</span>
+        </div>
+
+        <a href="#members" class="navbar__cta">Xem 5 Nodes</a>
+
+        <button class="btn-darkmode" id="darkmode-toggle"
+                aria-label="Chuyển chế độ tối/sáng" title="Chế độ tối/sáng">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================================================
+         HERO SECTION (3D THREE.JS WEBGL + CYBER HUD)
+    =================================================== -->
+    <section class="hero" id="hero" aria-label="Giới thiệu nhóm">
+      <!-- Three.js 3D Interactive WebGL Canvas -->
+      <div id="hero-3d-canvas" class="hero__3d-canvas" aria-label="Không gian 3D tương tác mô phỏng 5 nodes thành viên"></div>
+
+      <div class="container hero__container">
+        <!-- Telemetry Badge -->
+        <div class="hero__badge-top" data-aos="fade-down">
+          <span class="status-dot"></span>
+          <span>PROTOCOL: UTH_CS_2024 // 5 QUANTUM NODES</span>
+        </div>
+
+        <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+          <span class="hero__title-sub">NEXT-GEN PORTFOLIO NETWORK</span>
+          Chào mừng đến với<br />
+          <span class="hero__title-accent">Profio</span>
+        </h1>
+
+        <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="200">
+          Mạng lưới portfolio tương tác của <strong>5 sinh viên</strong> ngành Công nghệ thông tin — UTH.<br />
+          Mỗi không gian là một hành trình kỹ thuật số, tích hợp đồ họa 3D WebGL và kiến trúc hệ thống hiện đại.
+        </p>
+
+        <div class="hero__cta-group" data-aos="fade-up" data-aos-delay="300">
+          <a href="#members" class="btn btn--primary btn--lg">
+            ⚡ Khám phá thành viên
+          </a>
+          <a href="https://github.com/NguyenThienKhangWork/Profio" class="btn btn--outline btn--lg"
+             target="_blank" rel="noopener noreferrer">
+            ⬡ GitHub System
+          </a>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="hero__stats" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-item">
+            <span class="stat-number">05</span>
+            <span class="stat-label">Core Nodes</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Dự án Live</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Hiệu năng 3D</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#members" class="hero__scroll" aria-label="Cuộn xuống xem thành viên">
+        <span>SCROLL DOWN</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </section>
+
+    <!-- ===================================================
+         MEMBERS SECTION (CYBER HUD CARDS)
+    =================================================== -->
+    <section class="section members-section" id="members" aria-label="Thành viên nhóm">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section__title">Mạng lưới <span>Thành viên</span></h2>
+          <p class="section__subtitle">
+            Khám phá chi tiết năng lực kỹ thuật và portfolio độc bản của từng thành viên
+          </p>
+        </div>
+
+        <div class="members__grid">
+
+          <!-- ===== MEMBER 1: KHANG (DONE / ACTIVE) ===== -->
+          <article class="member-card member-card--active"
+                   data-aos="fade-up" data-aos-delay="0">
+            <a href="./members/khang/index.html" class="member-card__link"
+               aria-label="Xem portfolio của Nguyễn Thiên Khang">
+
+              <div class="member-card__header">
+                <div class="member-card__avatar">
+                  <span class="avatar-emoji">👨‍💻</span>
+                </div>
+                <div class="member-card__status member-card__status--done">
+                  ● NODE ACTIVE
+                </div>
+              </div>
+
+              <div class="member-card__body">
+                <h3 class="member-card__name">Nguyễn Thiên Khang</h3>
+                <p class="member-card__role">⚡ Java Backend Developer</p>
+                <p class="member-card__school">UTH — Công nghệ thông tin</p>
+
+                <div class="member-card__tags">
+                  <span class="mtag">☕ Java 17</span>
+                  <span class="mtag">🍃 Spring Boot 3</span>
+                  <span class="mtag">🗄️ MySQL</span>
+                  <span class="mtag">🐳 Docker</span>
+                </div>
+
+                <div class="member-card__projects">
+                  <span class="projects-count">2 DỰ ÁN</span>
+                  <span class="projects-list">AI Tasker · MiYuki Express</span>
+                </div>
+              </div>
+
+              <div class="member-card__footer">
+                <span class="member-card__cta">Truy cập Node ➜</span>
+                <span class="member-card__gpa">GPA 3.02</span>
+              </div>
+            </a>
+          </article>
+
+          <!-- ===== MEMBER 2: PLACEHOLDER ===== -->
+          <article class="member-card member-card--placeholder"
+                   data-aos="fade-up" data-aos-delay="100">
+            <div class="member-card__link member-card__link--disabled"
+                 aria-label="Portfolio thành viên 2 — đang cập nhật">
+
+              <div class="member-card__header">
+                <div class="member-card__avatar member-card__avatar--empty">
+                  <span class="avatar-emoji">👤</span>
+                </div>
+                <div class="member-card__status member-card__status--pending">
+                  ◌ INITIALIZING...
+                </div>
+              </div>
+
+              <div class="member-card__body">
+                <h3 class="member-card__name">Thành viên 2</h3>
+                <p class="member-card__role">Đang thiết lập thông số...</p>
+                <p class="member-card__school">UTH — Công nghệ thông tin</p>
+                <div class="member-card__tags">
+                  <span class="mtag mtag--empty">PENDING_SYNC</span>
+                </div>
+              </div>
+
+              <div class="member-card__footer">
+                <span class="member-card__cta member-card__cta--disabled">Sắp mở kết nối →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ===== MEMBER 3: PLACEHOLDER ===== -->
+          <article class="member-card member-card--placeholder"
+                   data-aos="fade-up" data-aos-delay="200">
+            <div class="member-card__link member-card__link--disabled"
+                 aria-label="Portfolio thành viên 3 — đang cập nhật">
+
+              <div class="member-card__header">
+                <div class="member-card__avatar member-card__avatar--empty">
+                  <span class="avatar-emoji">👤</span>
+                </div>
+                <div class="member-card__status member-card__status--pending">
+                  ◌ INITIALIZING...
+                </div>
+              </div>
+
+              <div class="member-card__body">
+                <h3 class="member-card__name">Thành viên 3</h3>
+                <p class="member-card__role">Đang thiết lập thông số...</p>
+                <p class="member-card__school">UTH — Công nghệ thông tin</p>
+                <div class="member-card__tags">
+                  <span class="mtag mtag--empty">PENDING_SYNC</span>
+                </div>
+              </div>
+
+              <div class="member-card__footer">
+                <span class="member-card__cta member-card__cta--disabled">Sắp mở kết nối →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ===== MEMBER 4: PLACEHOLDER ===== -->
+          <article class="member-card member-card--placeholder"
+                   data-aos="fade-up" data-aos-delay="300">
+            <div class="member-card__link member-card__link--disabled"
+                 aria-label="Portfolio thành viên 4 — đang cập nhật">
+
+              <div class="member-card__header">
+                <div class="member-card__avatar member-card__avatar--empty">
+                  <span class="avatar-emoji">👤</span>
+                </div>
+                <div class="member-card__status member-card__status--pending">
+                  ◌ INITIALIZING...
+                </div>
+              </div>
+
+              <div class="member-card__body">
+                <h3 class="member-card__name">Thành viên 4</h3>
+                <p class="member-card__role">Đang thiết lập thông số...</p>
+                <p class="member-card__school">UTH — Công nghệ thông tin</p>
+                <div class="member-card__tags">
+                  <span class="mtag mtag--empty">PENDING_SYNC</span>
+                </div>
+              </div>
+
+              <div class="member-card__footer">
+                <span class="member-card__cta member-card__cta--disabled">Sắp mở kết nối →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ===== MEMBER 5: PLACEHOLDER ===== -->
+          <article class="member-card member-card--placeholder"
+                   data-aos="fade-up" data-aos-delay="400">
+            <div class="member-card__link member-card__link--disabled"
+                 aria-label="Portfolio thành viên 5 — đang cập nhật">
+
+              <div class="member-card__header">
+                <div class="member-card__avatar member-card__avatar--empty">
+                  <span class="avatar-emoji">👤</span>
+                </div>
+                <div class="member-card__status member-card__status--pending">
+                  ◌ INITIALIZING...
+                </div>
+              </div>
+
+              <div class="member-card__body">
+                <h3 class="member-card__name">Thành viên 5</h3>
+                <p class="member-card__role">Đang thiết lập thông số...</p>
+                <p class="member-card__school">UTH — Công nghệ thông tin</p>
+                <div class="member-card__tags">
+                  <span class="mtag mtag--empty">PENDING_SYNC</span>
+                </div>
+              </div>
+
+              <div class="member-card__footer">
+                <span class="member-card__cta member-card__cta--disabled">Sắp mở kết nối →</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- .members__grid -->
+
+        <!-- Completion Tracker (Sci-Fi Energy Bar) -->
+        <div class="completion-tracker" data-aos="fade-up" data-aos-delay="500">
+          <div class="completion-tracker__header">
+            <span>Mức độ đồng bộ hệ thống</span>
+            <span class="completion-count" id="completion-count">1 / 5 Nodes kết nối</span>
+          </div>
+          <div class="completion-bar">
+            <div class="completion-bar__fill" style="width: 20%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         ABOUT / HƯỚNG DẪN DỰ ÁN
+    =================================================== -->
+    <section class="section guide-section" id="guide" aria-label="Hướng dẫn kỹ thuật">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Kiến trúc <span>Hệ thống</span></h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="100">
+          Chuẩn mực kỹ thuật và quy chuẩn phát triển phân tán
+        </p>
+
+        <div class="guide-grid">
+          <div class="guide-card" data-aos="fade-right">
+            <div class="guide-card__icon">⚡</div>
+            <h3>Tech Stack 3D</h3>
+            <ul>
+              <li>Three.js WebGL Interactive</li>
+              <li>HTML5 Semantic + Cyber HUD</li>
+              <li>Vanilla CSS Modern Variables</li>
+              <li>GSAP 3 + ScrollTrigger Engine</li>
+              <li>AOS & Typed.js Frameworks</li>
+            </ul>
+          </div>
+
+          <div class="guide-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="guide-card__icon">⬡</div>
+            <h3>19 Tiêu chí Chuẩn mực</h3>
+            <ul>
+              <li>19/19 tiêu chí đánh giá UTH</li>
+              <li>Hiển thị mượt mà trên mọi thiết bị</li>
+              <li>Theme Switcher: Obsidian Cyber / Lab</li>
+              <li>Card Tilt 3D & Particle Galaxy</li>
+              <li>Tối ưu 60fps & Clean Code</li>
+            </ul>
+          </div>
+
+          <div class="guide-card" data-aos="fade-left" data-aos-delay="200">
+            <div class="guide-card__icon">🛰️</div>
+            <h3>Phân vùng Nodes</h3>
+            <ul>
+              <li><code>members/khang/</code> (Java Backend)</li>
+              <li><code>members/member2/</code></li>
+              <li><code>members/member3/</code></li>
+              <li><code>members/member4/</code></li>
+              <li><code>members/member5/</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">Profio System</span>
+      </div>
+      <p class="footer__copy">
+        &copy; 2024 Nhóm Profio — UTH Công nghệ thông tin. Engineered with High-Tech & WebGL.
+      </p>
+      <div class="footer__links">
+        <a href="#hero" class="footer__link">↑ Lên đầu trang</a>
+        <a href="GUIDE.md" class="footer__link">Tài liệu Guide</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN Libraries: Three.js, GSAP, AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+
+  <!-- 3D WebGL Three.js Scene Script -->
+  <script src="./js/three-landing.js" defer></script>
+
+  <!-- Main Landing JS -->
+  <script src="./js/landing.js" defer></script>
+</body>
+</html>
