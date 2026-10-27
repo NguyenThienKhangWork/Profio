@@ -19,3 +19,51 @@ $('#form').addEventListener('submit',e=>{e.preventDefault();let ok=true;
  rules.forEach(([id,test,msg])=>{const el=$('#'+id),good=test(el.value.trim());
   el.classList.toggle('bad',!good);$('#e-'+id).textContent=good?'':msg;ok=ok&&good;});
  $('#ok').hidden=!ok;if(ok){e.target.reset();setTimeout(()=>$('#ok').hidden=true,4000);}});
+
+// Ocean Bubble Preloader
+(() => {
+  const p = $('#ocean-preloader');
+  if (!p) return;
+  const fill = $('#ocean-fill'), pct = $('#ocean-percent'), st = $('#ocean-status');
+  let cur = 0;
+  const start = performance.now(), minTime = 1000;
+  const msgs = [
+    { at: 0, t: 'KHỞI TẠO BUBBLE SEA...' },
+    { at: 35, t: 'NẠP DỮ LIỆU ĐÁY BIỂN...' },
+    { at: 70, t: 'KẾT NỐI HỒ SƠ TIẾN THỊNH...' },
+    { at: 92, t: 'HỆ THỐNG SẴN SÀNG! 🫧' }
+  ];
+  let docLoaded = document.readyState === 'complete';
+  if (!docLoaded) window.addEventListener('load', () => docLoaded = true);
+
+  const t = setInterval(() => {
+    const el = performance.now() - start;
+    let tgt = Math.min((el / minTime) * 100, 95);
+    if (docLoaded && el >= minTime) tgt = 100;
+    if (cur < tgt) {
+      cur += (tgt - cur) * 0.2 + 0.8;
+      if (cur > tgt) cur = tgt;
+    }
+    if (fill) fill.style.width = cur + '%';
+    if (pct) pct.textContent = Math.floor(cur) + '%';
+    if (st) {
+      for (let i = msgs.length - 1; i >= 0; i--) {
+        if (cur >= msgs[i].at) { st.textContent = msgs[i].t; break; }
+      }
+    }
+    if (cur >= 100) {
+      clearInterval(t);
+      setTimeout(() => {
+        p.classList.add('is-loaded');
+        setTimeout(() => p.remove(), 600);
+      }, 200);
+    }
+  }, 20);
+  setTimeout(() => {
+    if (!p.classList.contains('is-loaded')) {
+      clearInterval(t);
+      p.classList.add('is-loaded');
+      setTimeout(() => p.remove(), 600);
+    }
+  }, 2400);
+})();

@@ -748,3 +748,154 @@
   position: relative;
   z-index: 2;
 }
+
+/* ============================================================
+   GAME CYBER PRELOADER (Node 05 — Nguyễn Quỳnh Như)
+============================================================ */
+
+.game-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050510;
+  background-image:
+    radial-gradient(circle at center, rgba(236, 72, 153, 0.1) 0%, rgba(5, 5, 16, 0.98) 75%),
+    linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(236, 72, 153, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.game-preloader.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.06);
+}
+
+.game-preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 2.5rem;
+  max-width: 440px;
+  width: 90%;
+  position: relative;
+  z-index: 2;
+}
+
+.game-preloader__spinner {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-spinner-ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.game-spinner-ring--outer {
+  inset: 0;
+  border: 2px dashed #ec4899;
+  box-shadow: 0 0 16px rgba(236, 72, 153, 0.4);
+  animation: gameSpin 3s linear infinite;
+}
+
+.game-spinner-ring--inner {
+  inset: 12px;
+  border: 2px solid transparent;
+  border-top-color: #00f2fe;
+  border-bottom-color: #00f2fe;
+  box-shadow: 0 0 14px rgba(0, 242, 254, 0.45);
+  animation: gameSpinRev 1.8s linear infinite;
+}
+
+.game-spinner-core {
+  position: relative;
+  z-index: 3;
+  width: 38px;
+  height: 38px;
+  background: rgba(236, 72, 153, 0.15);
+  border: 1px solid #ec4899;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 0 14px rgba(236, 72, 153, 0.5);
+}
+
+@keyframes gameSpin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes gameSpinRev { from { transform: rotate(360deg); } to { transform: rotate(0); } }
+
+.game-preloader__brand {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #f472b6;
+  text-transform: uppercase;
+}
+
+.game-preloader__status {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #00f2fe;
+  letter-spacing: 0.06em;
+  min-height: 1.3rem;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.game-preloader__bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  border-radius: var(--radius-full, 9999px);
+  overflow: hidden;
+  position: relative;
+}
+
+.game-preloader__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ec4899, #a855f7, #00f2fe);
+  box-shadow: 0 0 10px #ec4899, 0 0 16px #00f2fe;
+  border-radius: inherit;
+  transition: width 0.08s ease;
+}
+
+.game-preloader__metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--clr-muted, #94a3b8);
+}
+
+.game-metric {
+  color: #00f2fe;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+}
+
+.game-metric-status {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+}

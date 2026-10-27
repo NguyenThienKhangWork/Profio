@@ -165,3 +165,51 @@ form.addEventListener('submit', e => {
   okMsg.textContent = 'Cảm ơn bạn! Ứng dụng email sẽ mở ra để bạn gửi tin nhắn.';
   form.reset();
 });
+
+/* ---------- 8. Data Stream Preloader ---------- */
+(() => {
+  const p = $('#data-preloader');
+  if (!p) return;
+  const fill = $('#data-fill'), pct = $('#data-percent'), st = $('#data-status');
+  let cur = 0;
+  const start = performance.now(), minTime = 1000;
+  const msgs = [
+    { at: 0, t: '[ETL_PIPELINE] TRÍCH XUẤT DỮ LIỆU ĐẦU VÀO...' },
+    { at: 30, t: '[SQL_QUERY] XỬ LÝ & ĐỒNG BỘ DỮ LIỆU...' },
+    { at: 65, t: '[DATA_NODE] TẢI HỒ SƠ VŨ VĂN HIẾU...' },
+    { at: 90, t: '[SYSTEM_READY] HỒ SƠ DỮ LIỆU SẴN SÀNG! 📊' }
+  ];
+  let docLoaded = document.readyState === 'complete';
+  if (!docLoaded) window.addEventListener('load', () => docLoaded = true);
+
+  const t = setInterval(() => {
+    const el = performance.now() - start;
+    let tgt = Math.min((el / minTime) * 100, 95);
+    if (docLoaded && el >= minTime) tgt = 100;
+    if (cur < tgt) {
+      cur += (tgt - cur) * 0.2 + 0.8;
+      if (cur > tgt) cur = tgt;
+    }
+    if (fill) fill.style.width = cur + '%';
+    if (pct) pct.textContent = Math.floor(cur) + '%';
+    if (st) {
+      for (let i = msgs.length - 1; i >= 0; i--) {
+        if (cur >= msgs[i].at) { st.textContent = msgs[i].t; break; }
+      }
+    }
+    if (cur >= 100) {
+      clearInterval(t);
+      setTimeout(() => {
+        p.classList.add('is-loaded');
+        setTimeout(() => p.remove(), 600);
+      }, 200);
+    }
+  }, 20);
+  setTimeout(() => {
+    if (!p.classList.contains('is-loaded')) {
+      clearInterval(t);
+      p.classList.add('is-loaded');
+      setTimeout(() => p.remove(), 600);
+    }
+  }, 2400);
+})();

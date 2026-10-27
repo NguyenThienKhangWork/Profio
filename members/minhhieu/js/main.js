@@ -292,3 +292,55 @@ document.addEventListener('keydown', (e) => {
 const style = document.createElement('style');
 style.textContent = '.nav-links a.active-link { color: var(--text-primary); }';
 document.head.appendChild(style);
+
+// ===========================
+// ROCKET ORB PRELOADER
+// ===========================
+(() => {
+  const p = document.getElementById('rocket-preloader');
+  if (!p) return;
+  const fill = document.getElementById('rocket-fill');
+  const pct = document.getElementById('rocket-percent');
+  const st = document.getElementById('rocket-status');
+  let cur = 0;
+  const start = performance.now(), minTime = 1000;
+  const msgs = [
+    { at: 0,  t: 'KHỞI ĐỘNG HỆ THỐNG BACKEND...' },
+    { at: 30, t: 'NẠP DỊCH VỤ MICROSERVICES...' },
+    { at: 65, t: 'KẾT NỐI HỒ SƠ HÀ MINH HIẾU...' },
+    { at: 90, t: 'SẴN SÀNG CẤT CÁNH! 🚀' }
+  ];
+  let docLoaded = document.readyState === 'complete';
+  if (!docLoaded) window.addEventListener('load', () => docLoaded = true);
+
+  const t = setInterval(() => {
+    const el = performance.now() - start;
+    let tgt = Math.min((el / minTime) * 100, 95);
+    if (docLoaded && el >= minTime) tgt = 100;
+    if (cur < tgt) {
+      cur += (tgt - cur) * 0.2 + 0.8;
+      if (cur > tgt) cur = tgt;
+    }
+    if (fill) fill.style.width = cur + '%';
+    if (pct) pct.textContent = Math.floor(cur) + '%';
+    if (st) {
+      for (let i = msgs.length - 1; i >= 0; i--) {
+        if (cur >= msgs[i].at) { st.textContent = msgs[i].t; break; }
+      }
+    }
+    if (cur >= 100) {
+      clearInterval(t);
+      setTimeout(() => {
+        p.classList.add('is-loaded');
+        setTimeout(() => p.remove(), 600);
+      }, 200);
+    }
+  }, 20);
+  setTimeout(() => {
+    if (!p.classList.contains('is-loaded')) {
+      clearInterval(t);
+      p.classList.add('is-loaded');
+      setTimeout(() => p.remove(), 600);
+    }
+  }, 2400);
+})();

@@ -12,6 +12,23 @@
 </head>
 <body>
 
+<!-- Data Stream Preloader -->
+<div id="data-preloader" class="data-preloader" aria-label="Đang khởi tạo dữ liệu" role="status">
+  <div class="data-preloader__content">
+    <div class="data-preloader__spinner" aria-hidden="true">
+      <div class="data-spinner-ring data-spinner-ring--outer"></div>
+      <div class="data-spinner-ring data-spinner-ring--inner"></div>
+      <div class="data-spinner-node">VH</div>
+    </div>
+    <div class="data-preloader__brand">NODE 03 // VŨ VĂN HIẾU · DATA ENGINEER</div>
+    <div class="data-preloader__status" id="data-status">TRÍCH XUẤT DỮ LIỆU ĐẦU VÀO...</div>
+    <div class="data-preloader__bar">
+      <div class="data-preloader__fill" id="data-fill"></div>
+    </div>
+    <span class="data-preloader__percent" id="data-percent">0%</span>
+  </div>
+</div>
+
 <!-- ===== HEADER: MENU + TRANG CHỦ ===== -->
 <header>
   <nav id="navbar" aria-label="Menu chính">

@@ -1401,3 +1401,114 @@ body.light-mode .orb { opacity: 0.06; }
   .container { padding: 0 1.25rem; }
   .hero-name { font-size: 2rem; }
 }
+
+/* ============================================================
+   ROCKET ORB PRELOADER (Node 04 — Hà Minh Hiếu)
+============================================================ */
+.rocket-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary, #0a0e1a);
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(102, 126, 234, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(118, 75, 162, 0.15) 0%, transparent 60%);
+  transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
+  overflow: hidden;
+}
+.rocket-preloader.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.05);
+}
+.rocket-preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  max-width: 400px;
+  width: 88%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.rocket-preloader__icon-wrap {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rocket-preloader__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px dashed var(--accent-1, #63b3ed);
+  box-shadow: 0 0 16px rgba(99, 179, 237, 0.4);
+  animation: rocketSpin 3s linear infinite;
+}
+.rocket-preloader__ring--inner {
+  inset: 10px;
+  border: 2px solid transparent;
+  border-top-color: var(--accent-2, #9f7aea);
+  border-bottom-color: var(--accent-2, #9f7aea);
+  animation: rocketSpinRev 1.8s linear infinite;
+}
+.rocket-preloader__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-1, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  animation: rocketPulse 1.8s ease-in-out infinite;
+}
+@keyframes rocketSpin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+@keyframes rocketSpinRev { from { transform: rotate(360deg); } to { transform: rotate(0); } }
+@keyframes rocketPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+.rocket-preloader__brand {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary, #a0aec0);
+  text-transform: uppercase;
+}
+.rocket-preloader__status {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-1, #63b3ed);
+  min-height: 1.3rem;
+  text-shadow: 0 0 10px rgba(99, 179, 237, 0.5);
+}
+.rocket-preloader__bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: 20px;
+  overflow: hidden;
+}
+.rocket-preloader__fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2, #63b3ed);
+  border-radius: inherit;
+  box-shadow: 0 0 12px rgba(99, 179, 237, 0.6);
+  transition: width 0.08s ease;
+}
+.rocket-preloader__percent {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-3, #68d391);
+}
