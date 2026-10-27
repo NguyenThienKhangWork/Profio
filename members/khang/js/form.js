@@ -1,4 +1,4 @@
-﻿
+
 
 const ContactForm = (() => {
   
@@ -27,7 +27,7 @@ const ContactForm = (() => {
 
     const name = Utils.getById('form-name');
     if (!name || name.value.trim().length < 2) {
-      showError('form-name', 'err-name', 'Vui long nhap ho va ten (it nhat 2 ky tu)');
+      showError('form-name', 'err-name', 'Vui lòng nhập họ và tên (tối thiểu 2 ký tự)');
       isValid = false;
     } else {
       showValid('form-name', 'err-name');
@@ -35,7 +35,7 @@ const ContactForm = (() => {
 
     const email = Utils.getById('form-email');
     if (!email || !Utils.isValidEmail(email.value)) {
-      showError('form-email', 'err-email', 'Email chua hop le (VD: name@example.com)');
+      showError('form-email', 'err-email', 'Email không hợp lệ (Ví dụ: name@example.com)');
       isValid = false;
     } else {
       showValid('form-email', 'err-email');
@@ -43,7 +43,7 @@ const ContactForm = (() => {
 
     const msg = Utils.getById('form-msg');
     if (!msg || msg.value.trim().length < 10) {
-      showError('form-msg', 'err-msg', 'Noi dung phai co it nhat 10 ky tu');
+      showError('form-msg', 'err-msg', 'Nội dung tin nhắn phải có ít nhất 10 ký tự');
       isValid = false;
     } else {
       showValid('form-msg', 'err-msg');

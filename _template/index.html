@@ -122,12 +122,10 @@
 
         <!-- Lottie / Hình ảnh bên phải -->
         <div class="hero__visual">
-          <!-- TODO: Thay bằng Lottie animation thật (download JSON về ./assets/animations/) -->
+          <!-- Lottie animation / Hình ảnh đại diện -->
           <div id="hero-lottie" class="lottie-container" aria-hidden="true">
-            <!-- Fallback nếu chưa có Lottie JSON -->
-            <div class="lottie-fallback">
-              <div class="lottie-fallback__circle"></div>
-              <span class="lottie-fallback__emoji">💻</span>
+            <div class="lottie-fallback" style="overflow:hidden; border-radius:50%; width:260px; height:260px; border:4px solid var(--color-primary); box-shadow:var(--shadow-lg);">
+              <img src="./assets/images/avatar.jpg" alt="Ảnh đại diện" style="width:100%; height:100%; object-fit:cover;" />
             </div>
           </div>
         </div>
@@ -150,12 +148,7 @@
         <div class="about__grid">
           <!-- Ảnh đại diện -->
           <div class="about__image-wrap" data-aos="fade-right">
-            <!-- TODO: Thay src bằng ảnh đại diện thật của bạn (400x400px, nền trơn) -->
-            <div class="about__avatar-placeholder" aria-label="Ảnh đại diện">
-              <span>👤</span>
-            </div>
-            <!-- Khi có ảnh thật, xoá placeholder trên và bỏ comment dòng dưới: -->
-            <!-- <img src="./assets/images/avatar.jpg" alt="Ảnh đại diện của [Tên bạn]" class="about__avatar" /> -->
+            <img src="./assets/images/avatar.jpg" alt="Ảnh đại diện" class="about__avatar" style="width:320px; height:320px; border-radius:var(--radius-xl); object-fit:cover; border:3px solid var(--color-primary); box-shadow:var(--shadow-lg);" />
           </div>
 
           <!-- Nội dung -->

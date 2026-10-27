@@ -62,6 +62,12 @@
   .hero__cta,
   .hero__badges { justify-content: center; }
 
+  .hero__stats-hud {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+    margin-top: var(--sp-6);
+  }
+
   /* About */
   .about__image-wrap {
     flex-direction: column;

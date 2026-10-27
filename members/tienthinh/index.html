@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Website giới thiệu bản thân của Nguyễn Tiến Thịnh">
+<title>Nguyễn Tiến Thịnh | Giới thiệu bản thân</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="sea" aria-hidden="true"><div class="rays"></div><div id="bubbles"></div></div>
+
+<header>
+<nav id="nav" aria-label="Điều hướng chính">
+  <a class="logo" href="#home">Thịnh<span>.</span></a>
+  <button id="burger" aria-label="Mở menu">☰</button>
+  <ul id="menu">
+    <li><a href="#home">Trang chủ</a></li><li><a href="#about">Giới thiệu</a></li>
+    <li><a href="#goals">Mục tiêu</a></li><li><a href="#skills">Kỹ năng</a></li>
+    <li><a href="#edu">Học vấn</a></li><li><a href="#projects">Dự án</a></li>
+    <li><a href="#hobbies">Sở thích</a></li><li><a href="#contact">Liên hệ</a></li>
+  </ul>
+</nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="bubble-cluster">
+    <button class="bubble b-main" data-text="Xin chào! Mình là Nguyễn Tiến Thịnh, rất vui được gặp bạn 👋">
+      <img src="97add514-3b1a-4460-af3a-1bbf0475cafb.jpg"alt="Ảnh đại diện" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect width='300' height='300' fill='%230288d1'/%3E%3Ccircle cx='150' cy='115' r='55' fill='%23e1f5fe'/%3E%3Cellipse cx='150' cy='260' rx='95' ry='75' fill='%23e1f5fe'/%3E%3C/svg%3E'"><strong>Nguyễn Tiến Thịnh</strong>
+    </button>
+    <button class="bubble b1" data-text="Mình là sinh viên ngành Công nghệ thông tin.">Sinh viên CNTT</button>
+    <button class="bubble b2" data-text="Mình đang học Java và lập trình Web (HTML, CSS, JS).">Java · Web</button>
+    <button class="bubble b3" data-text="Mục tiêu: trở thành lập trình viên giỏi và làm ra sản phẩm hữu ích.">Mục tiêu</button>
+    <button class="bubble b4" data-text="Mình thích khám phá, học hỏi và làm việc nhóm!">Sở thích</button>
+  </div>
+  <p id="bubbleText" class="caption" aria-live="polite">🫧 Bấm vào bong bóng để biết thêm về mình</p>
+  <a href="#about" class="btn">Khám phá ↓</a>
+</section>
+
+<section id="about" class="reveal">
+  <h2>Giới thiệu</h2>
+  <div class="grid two">
+    <article class="card">
+      <h3>Thông tin cá nhân</h3>
+      <ul class="info">
+        <li><b>Họ tên:</b> Nguyễn Tiến Thịnh</li>
+        <li><b>Ngành học:</b> Công nghệ thông tin</li>
+        <li><b>Trường:</b> Đại học giao thông vận tải TP.HCM</li>
+        <li><b>Email:</b>thinhnt0966@ut.edu.vn</li>
+      </ul>
+    </article>
+    <article class="card">
+      <h3>Về mình</h3>
+      <p>Mình là sinh viên CNTT, yêu thích lập trình và những điều mới mẻ. Mình học qua việc làm dự án thực tế, luôn tò mò và sẵn sàng làm việc nhóm để cùng tiến bộ.</p>
+    </article>
+  </div>
+</section>
+
+<section id="goals" class="reveal">
+  <h2>Mục tiêu nghề nghiệp</h2>
+  <div class="grid two">
+    <article class="card"><h3>🌱 Ngắn hạn</h3><p>Nắm chắc nền tảng lập trình (Java, Web), hoàn thành tốt các dự án môn học và tìm cơ hội thực tập.</p></article>
+    <article class="card"><h3>🚀 Dài hạn</h3><p>Trở thành lập trình viên chuyên nghiệp, tham gia xây dựng các hệ thống phần mềm chất lượng cao.</p></article>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Kỹ năng</h2>
+  <div class="card skills">
+    <div class="skill"><span>HTML / CSS</span><div class="track"><i data-w="70"></i></div></div>
+    <div class="skill"><span>JavaScript</span><div class="track"><i data-w="55"></i></div></div>
+    <div class="skill"><span>Java</span><div class="track"><i data-w="65"></i></div></div>
+    <div class="skill"><span>Làm việc nhóm</span><div class="track"><i data-w="80"></i></div></div>
+  </div>
+</section>
+
+<section id="edu" class="reveal">
+  <h2>Học vấn &amp; hoạt động</h2>
+  <div class="grid two">
+    <article class="card"><h3>🎓 Đại học</h3><p>Ngành Công nghệ thông tin – Đại học giao thông vận tải TP.HCM, 2023–nay.</p></article>
+    <article class="card"><h3>👥 Hoạt động</h3><p>Làm bài tập lớn theo nhóm, tự học lập trình và tham gia các hoạt động của lớp/trường.</p></article>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Dự án</h2>
+  <div class="grid two">
+    <article class="card project"><h3>🏋️ Quản lý phòng Gym (GMS)</h3>
+      <p>Ứng dụng Java quản lý hội viên, gói tập, lịch tập, điểm danh với 3 vai trò Admin/Trainer/Member; lưu dữ liệu CSV/JSON và xuất báo cáo.</p>
+      <span class="tag">Java</span><span class="tag">CSV/JSON</span></article>
+    <article class="card project"><h3>🌊 Website giới thiệu bản thân</h3>
+      <p>Trang web cá nhân giao diện dưới đáy biển với bong bóng tương tác, responsive, có form liên hệ kiểm tra dữ liệu bằng JavaScript.</p>
+      <span class="tag">HTML</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></article>
+  </div>
+</section>
+
+<section id="hobbies" class="reveal">
+  <h2>Sở thích &amp; chứng chỉ</h2>
+  <div class="chips">
+    <span class="bubble chip">💻 Lập trình</span><span class="bubble chip">🎧 Nghe nhạc</span>
+    <span class="bubble chip">🎮 Chơi game</span><span class="bubble chip">📚 Tự học</span>
+  </div>
+  <p class="center">📜 Chứng chỉ: chưa có – đang học và tích lũy thêm.</p>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Liên hệ</h2>
+  <form id="form" class="card" novalidate>
+    <label for="name">Họ tên *</label><input id="name" type="text" placeholder="Nguyễn Văn A"><small id="e-name"></small>
+    <label for="email">Email *</label><input id="email" type="email" placeholder="ban@gmail.com"><small id="e-email"></small>
+    <label for="msg">Nội dung *</label><textarea id="msg" rows="4" placeholder="Xin chào Thịnh..."></textarea><small id="e-msg"></small>
+    <button class="btn" type="submit">Gửi tin nhắn</button>
+    <p id="ok" class="ok" hidden>✅ Cảm ơn bạn! Mình sẽ phản hồi sớm.</p>
+  </form>
+</section>
+</main>
+
+<footer><p>© 2026 Nguyễn Tiến Thịnh · Bài giữa kỳ Lập trình Web</p></footer>
+<button id="back" aria-label="Quay lại đầu trang">↑ Quay lại</button>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -255,6 +255,31 @@
   gap: var(--sp-3);
 }
 
+.navbar__hub-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff !important;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.22), rgba(168, 85, 247, 0.22));
+  border: 1.5px solid var(--clr-cyber-cyan);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+  text-decoration: none;
+  transition: all var(--transition-bounce);
+}
+
+.navbar__hub-pill:hover {
+  background: linear-gradient(135deg, var(--clr-cyber-cyan), var(--clr-cyber-purple));
+  color: #060814 !important;
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
+  transform: translateY(-2px) scale(1.05);
+}
+
 .btn-theme {
   display: flex;
   align-items: center;
@@ -747,4 +772,191 @@
 .skill-card > *:not(.tilt-shine) {
   position: relative;
   z-index: 2;
+}
+
+/* ============================================================
+   CYBER PRELOADER (Holographic Quantum Boot Sequence)
+============================================================ */
+
+.cyber-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #04060f;
+  background-image:
+    radial-gradient(circle at center, rgba(0, 242, 254, 0.08) 0%, rgba(4, 6, 15, 0.98) 75%),
+    linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 32px 32px, 32px 32px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.cyber-preloader.is-loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.06);
+}
+
+.cyber-preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 2.5rem;
+  max-width: 440px;
+  width: 90%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Concentric Quantum Spinner Rings */
+.cyber-preloader__spinner {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyber-spinner-ring {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.cyber-spinner-ring--outer {
+  inset: 0;
+  border: 2px dashed rgba(0, 242, 254, 0.7);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.3), inset 0 0 16px rgba(0, 242, 254, 0.2);
+  animation: preloaderSpin 3.2s linear infinite;
+}
+
+.cyber-spinner-ring--middle {
+  inset: 12px;
+  border: 2px solid transparent;
+  border-top-color: #a855f7;
+  border-bottom-color: #a855f7;
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.45);
+  animation: preloaderSpinRev 2s linear infinite;
+}
+
+.cyber-spinner-ring--inner {
+  inset: 24px;
+  border: 2px solid transparent;
+  border-left-color: #10b981;
+  border-right-color: #10b981;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.3), 0 0 12px rgba(16, 185, 129, 0.45);
+  animation: preloaderSpin 1.2s linear infinite;
+}
+
+.cyber-spinner-core {
+  position: relative;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 242, 254, 0.12);
+  border: 1px solid rgba(0, 242, 254, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(0, 242, 254, 0.45);
+}
+
+.cyber-spinner-glyph {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #00f2fe;
+  text-shadow: 0 0 8px #00f2fe;
+  letter-spacing: 0.05em;
+}
+
+@keyframes preloaderSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes preloaderSpinRev {
+  from { transform: rotate(360deg); }
+  to   { transform: rotate(0deg); }
+}
+
+/* Telemetry Information */
+.cyber-preloader__telemetry {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.cyber-preloader__brand {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+}
+
+.cyber-preloader__status {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-cyber-cyan);
+  letter-spacing: 0.06em;
+  min-height: 1.3rem;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* Futuristic Progress Bar */
+.cyber-preloader__bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 242, 254, 0.35);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.cyber-preloader__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00f2fe, #a855f7, #10b981);
+  box-shadow: 0 0 10px #00f2fe, 0 0 16px #a855f7;
+  border-radius: inherit;
+  transition: width 0.08s ease;
+}
+
+.cyber-preloader__metrics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--clr-muted);
+}
+
+.preloader-metric {
+  color: #10b981;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
+}
+
+.preloader-metric-status {
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
 }

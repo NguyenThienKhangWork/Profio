@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio cá nhân của Hà Minh Hiếu - Backend Developer | Sinh viên Công nghệ Thông tin tại ĐH Giao thông Vận tải TP.HCM." />
+  <meta property="og:title" content="Hà Minh Hiếu | Backend Developer Portfolio" />
+  <meta property="og:description" content="Portfolio cá nhân – Backend Developer, đam mê xây dựng hệ thống lớn." />
+  <title>Hà Minh Hiếu | Backend Developer Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+</head>
+<body>
+
+<div class="bg-effects" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Điều hướng chính">
+    <div class="nav-logo">HMH.</div>
+    <ul class="nav-links" role="menubar">
+      <li role="none"><a href="#hero"         role="menuitem">Trang Chủ</a></li>
+      <li role="none"><a href="#about"        role="menuitem">Giới Thiệu</a></li>
+      <li role="none"><a href="#goals"        role="menuitem">Mục Tiêu</a></li>
+      <li role="none"><a href="#skills"       role="menuitem">Kỹ Năng</a></li>
+      <li role="none"><a href="#education"    role="menuitem">Học Vấn</a></li>
+      <li role="none"><a href="#projects"     role="menuitem">Dự Án</a></li>
+      <li role="none"><a href="#certificates" role="menuitem">Chứng Chỉ</a></li>
+      <li role="none"><a href="#contact"      role="menuitem">Liên Hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="darkModeToggle" title="Chuyển light mode" aria-label="Toggle dark/light mode">☀️</button>
+      <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <nav id="mobileNav" class="mobile-nav" aria-label="Menu di động">
+    <a href="#hero">🏠 Trang Chủ</a>
+    <a href="#about">👤 Giới Thiệu</a>
+    <a href="#goals">🎯 Mục Tiêu</a>
+    <a href="#skills">⚡ Kỹ Năng</a>
+    <a href="#education">🎓 Học Vấn</a>
+    <a href="#projects">💻 Dự Án</a>
+    <a href="#certificates">🏆 Chứng Chỉ</a>
+    <a href="#contact">📬 Liên Hệ</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Giới thiệu chính">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-greeting">
+            <div class="greeting-line"></div>
+            <span class="greeting-text">// Xin chào, tôi là</span>
+          </div>
+          <h1 class="hero-name">
+            Hà Minh<br />
+            <span class="highlight">Hiếu</span>
+          </h1>
+          <div class="hero-role">
+            <div class="role-badge">
+              <span class="dot"></span>
+              <span id="typingText">Backend Developer</span>
+            </div>
+          </div>
+          <p class="hero-major">
+            📚 Sinh viên <strong>Công Nghệ Thông Tin</strong> &nbsp;|&nbsp;
+            🏫 ĐH Giao thông Vận tải TP.HCM
+          </p>
+          <p class="hero-description">
+            Đam mê xây dựng hệ thống backend mạnh mẽ, hiệu suất cao.
+            Hướng tới trở thành <strong style="color:var(--accent-1)">Senior Backend Developer</strong>
+            và kiến trúc sư phần mềm trong tương lai.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary" id="btnViewProjects">🚀 Xem Dự Án</a>
+            <a href="#contact" class="btn-secondary" id="btnContact">📬 Liên Hệ</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring-inner"></div>
+            <img
+              src="images/avatar.jpg"
+              alt="Ảnh đại diện Hà Minh Hiếu"
+              class="avatar-img"
+              id="avatarImg"
+              onerror="this.onerror=null;this.src='data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 width%3D%22320%22 height%3D%22320%22%3E%3Ccircle cx%3D%22160%22 cy%3D%22160%22 r%3D%22160%22 fill%3D%22%23141828%22%2F%3E%3Ctext x%3D%22160%22 y%3D%22190%22 text-anchor%3D%22middle%22 font-size%3D%22120%22 fill%3D%22%23667eea%22%3E👤%3C%2Ftext%3E%3C%2Fsvg%3E'"
+            />
+            <div class="avatar-badges">
+              <div class="badge-card">
+                <span class="icon">💻</span>
+                <div class="info">
+                  <strong>Backend Dev</strong>
+                  <span>CNTT - UTH</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-label="Giới thiệu bản thân">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// about.me</div>
+        <h2 class="section-title">Giới Thiệu <span>Bản Thân</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <h3>📋 Thông Tin Cá Nhân</h3>
+          <ul class="info-list">
+            <li><span class="label">Họ và tên</span><span class="value">Hà Minh Hiếu</span></li>
+            <li><span class="label">Ngành học</span><span class="value">Công Nghệ Thông Tin</span></li>
+            <li><span class="label">Vị trí</span><span class="value">Backend Developer</span></li>
+            <li><span class="label">Trường</span><span class="value">ĐH Giao thông Vận tải TP.HCM</span></li>
+            <li><span class="label">GitHub</span><span class="value">
+              <a href="https://github.com/Hius-1927" target="_blank" rel="noopener"
+                 style="color:var(--accent-1);text-decoration:none;">@Hius-1927</a>
+            </span></li>
+            <li><span class="label">Trạng thái</span><span class="value" style="color:var(--accent-3);">✅ Đang tìm kiếm cơ hội</span></li>
+          </ul>
+        </div>
+        <div class="about-card reveal-right">
+          <h3>✍️ Về Tôi</h3>
+          <p class="intro-text">
+            Chào! Tôi là <strong style="color:var(--accent-1)">Hà Minh Hiếu</strong>, sinh viên ngành
+            <strong>Công Nghệ Thông Tin</strong> tại Đại học Giao thông Vận tải TP.HCM.
+          </p>
+          <p class="intro-text">
+            Tôi có niềm đam mê đặc biệt với lập trình backend – thiết kế API, xây dựng cơ sở dữ liệu,
+            và tối ưu hóa hiệu suất hệ thống. Tôi tin rằng một backend vững chắc là nền tảng
+            của mọi sản phẩm công nghệ xuất sắc.
+          </p>
+          <p class="intro-text">
+            Ngoài việc học tập, tôi thích thực hành qua các dự án thực tế để nâng cao kỹ năng,
+            từ game lập trình đến các ứng dụng AI. Tôi luôn sẵn sàng học hỏi và cộng tác
+            trong môi trường làm việc chuyên nghiệp.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER GOALS -->
+  <section id="goals" aria-label="Mục tiêu nghề nghiệp">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// career.goals</div>
+        <h2 class="section-title">Mục Tiêu <span>Nghề Nghiệp</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="goals-grid">
+        <div class="goal-card reveal">
+          <div class="goal-icon">🌱</div>
+          <div class="goal-label">Ngắn Hạn (1–2 Năm)</div>
+          <h3>Junior → Mid-Level Backend Developer</h3>
+          <p>
+            Củng cố nền tảng lập trình backend với Java, Python. Thành thạo thiết kế RESTful API,
+            làm việc với cơ sở dữ liệu SQL/NoSQL, và tham gia các dự án thực tế tại doanh nghiệp
+            để tích lũy kinh nghiệm chuyên môn.
+          </p>
+        </div>
+        <div class="goal-card reveal">
+          <div class="goal-icon">🚀</div>
+          <div class="goal-label">Dài Hạn (3–5 Năm)</div>
+          <h3>Senior Backend Developer / Software Architect</h3>
+          <p>
+            Trong 3–5 năm tới, trở thành Kỹ sư Backend cấp cao hoặc Kiến trúc sư Phần mềm. Làm chủ
+            khả năng <strong>thiết kế hệ thống lớn, High Scalability</strong>, đảm bảo tính bảo mật
+            và đóng góp trực tiếp vào việc định hình cấu trúc công nghệ cốt lõi của doanh nghiệp.
+          </p>
+        </div>
+        <div class="goal-card reveal">
+          <div class="goal-icon">⚙️</div>
+          <div class="goal-label">Định Hướng Kỹ Thuật</div>
+          <h3>System Design & High Performance</h3>
+          <p>
+            Tập trung vào thiết kế hệ thống phân tán, microservices architecture, tối ưu truy vấn
+            cơ sở dữ liệu và xây dựng hệ thống có khả năng mở rộng linh hoạt theo nhu cầu
+            thực tiễn của doanh nghiệp.
+          </p>
+        </div>
+        <div class="goal-card reveal">
+          <div class="goal-icon">🤝</div>
+          <div class="goal-label">Phát Triển Bản Thân</div>
+          <h3>Lãnh Đạo & Chia Sẻ Kiến Thức</h3>
+          <p>
+            Phát triển kỹ năng lãnh đạo, mentoring đội nhóm kỹ thuật trẻ. Đóng góp cho cộng đồng
+            open-source, chia sẻ kiến thức và kinh nghiệm nhằm nâng cao năng lực chung
+            của ngành công nghệ Việt Nam.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" aria-label="Kỹ năng">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// my.skills</div>
+        <h2 class="section-title">Kỹ <span>Năng</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3>🖥️ Ngôn Ngữ Lập Trình</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">C++</span>
+                <span class="skill-bar-pct">75%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Python</span>
+                <span class="skill-bar-pct">70%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Java</span>
+                <span class="skill-bar-pct">65%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3>🌐 Web & Database</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">HTML / CSS</span>
+                <span class="skill-bar-pct">80%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">SQL</span>
+                <span class="skill-bar-pct">68%</span>
+              </div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="68%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3>🛠️ Công Nghệ & Kỹ Năng Khác</h3>
+          <div class="skill-tags" style="margin-bottom:1rem;">
+            <span class="skill-tag tag-cpp"    data-tooltip="Lập trình hệ thống, thuật toán">⚡ C++</span>
+            <span class="skill-tag tag-python"  data-tooltip="AI, Data, Scripting">🐍 Python</span>
+            <span class="skill-tag tag-html"    data-tooltip="Markup & Layout">📄 HTML</span>
+            <span class="skill-tag tag-css"     data-tooltip="Styling & Animations">🎨 CSS</span>
+            <span class="skill-tag tag-java"    data-tooltip="OOP, Backend">☕ Java</span>
+            <span class="skill-tag tag-sql"     data-tooltip="Database Query">🗄️ SQL</span>
+            <span class="skill-tag tag-git"     data-tooltip="Version Control">📦 Git</span>
+            <span class="skill-tag tag-vscode"  data-tooltip="IDE">🔷 VS Code</span>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Problem Solving</span>
+                <span class="skill-bar-pct">72%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="72%" style="background:linear-gradient(90deg,#43e97b,#38f9d7);"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-info">
+                <span class="skill-bar-name">Teamwork / Git</span>
+                <span class="skill-bar-pct">78%</span>
+              </div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" data-width="78%" style="background:linear-gradient(90deg,#f6ad55,#f6d365);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" aria-label="Học vấn và kinh nghiệm">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// education.history</div>
+        <h2 class="section-title">Học Vấn & <span>Hoạt Động</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item reveal">
+          <div class="edu-card">
+            <span class="edu-year">2023 – Hiện tại</span>
+            <h3>Cử nhân Công Nghệ Thông Tin</h3>
+            <p class="school">🏫 Đại học Giao thông Vận tải TP.HCM (UTH)</p>
+            <p>
+              Chuyên ngành Công Nghệ Thông Tin. Tập trung học các môn:
+              Lập trình hướng đối tượng, Cấu trúc dữ liệu &amp; Giải thuật, Cơ sở dữ liệu,
+              Mạng máy tính, Lập trình Web. Tích cực tham gia các dự án nhóm và hoạt động
+              ngoại khóa của trường.
+            </p>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="edu-card">
+            <span class="edu-year">2023 – Hiện tại</span>
+            <h3>Tự học &amp; Phát triển kỹ năng</h3>
+            <p class="school">📚 Online Platforms &amp; Cộng đồng Dev</p>
+            <p>
+              Học lập trình C++ qua các bài toán thuật toán. Nghiên cứu Python cho AI/ML.
+              Thực hành xây dựng dự án cá nhân để áp dụng kiến thức. Theo dõi các
+              xu hướng công nghệ backend mới nhất (microservices, cloud, API design).
+            </p>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="edu-card">
+            <span class="edu-year">2023 – Hiện tại</span>
+            <h3>Hoạt Động Sinh Viên</h3>
+            <p class="school">🎓 CLB &amp; Tổ chức tại UTH</p>
+            <p>
+              Tham gia các hoạt động và câu lạc bộ kỹ thuật của trường, phát triển kỹ năng
+              làm việc nhóm, giao tiếp và thuyết trình. Học hỏi từ các thầy cô và bạn bè
+              trong môi trường học thuật năng động.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" aria-label="Dự án cá nhân">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// my.projects</div>
+        <h2 class="section-title">Dự Án <span>Cá Nhân</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects-filter" role="group" aria-label="Lọc dự án">
+        <button class="filter-btn active" data-filter="all"  id="filterAll">Tất cả</button>
+        <button class="filter-btn"        data-filter="cpp"  id="filterCpp">C++</button>
+        <button class="filter-btn"        data-filter="ai"   id="filterAi">AI / Python</button>
+        <button class="filter-btn"        data-filter="web"  id="filterWeb">Web</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card reveal" data-category="cpp game" aria-label="Dự án Caro Game">
+          <div class="project-banner">
+            <div class="project-banner-bg banner-caro">♟️</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-cpp">C++</span>
+              <span class="project-tag pt-web">Game Dev</span>
+            </div>
+            <h3>🎮 Caro Game</h3>
+            <p>
+              Trò chơi Caro (Gomoku) được xây dựng bằng C++. Hỗ trợ chế độ chơi 2 người
+              hoặc chơi với máy (AI). Sử dụng thuật toán Minimax với Alpha-Beta Pruning
+              để AI đưa ra nước đi tối ưu. Giao diện đơn giản, logic rõ ràng.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/Hius-1927/Caro-Game"
+               target="_blank" rel="noopener"
+               class="project-link" id="linkCaroGame"
+               aria-label="Xem mã nguồn Caro Game trên GitHub">
+              🔗 Xem GitHub →
+            </a>
+            <span style="font-size:0.75rem;color:var(--text-muted);">C++ · AI</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="ai python web nlp" aria-label="Dự án AI English Speaking Platform">
+          <div class="project-banner">
+            <div class="project-banner-bg banner-ai">🤖</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag pt-ai">Python</span>
+              <span class="project-tag pt-nlp">NLP / AI</span>
+              <span class="project-tag pt-web">Web App</span>
+            </div>
+            <h3>🗣️ AI English Speaking Practice Platform</h3>
+            <p>
+              Nền tảng luyện tập tiếng Anh giao tiếp được hỗ trợ bởi AI. Người dùng
+              có thể luyện nói, nhận phản hồi thông minh từ AI về phát âm và ngữ pháp.
+              Sử dụng Speech-to-Text, NLP và các mô hình ngôn ngữ để phân tích câu trả lời.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/botPhU/project-An-English-speaking-practice-platform-supported-by-AI"
+               target="_blank" rel="noopener"
+               class="project-link" id="linkAiEnglish"
+               aria-label="Xem mã nguồn AI English Speaking Platform trên GitHub">
+              🔗 Xem GitHub →
+            </a>
+            <span style="font-size:0.75rem;color:var(--text-muted);">AI · NLP · Web</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates" aria-label="Chứng chỉ và giải thưởng">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// certificates.awards</div>
+        <h2 class="section-title">Chứng Chỉ & <span>Giải Thưởng</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon">📜</div>
+          <h3>Chứng Chỉ Kỹ Thuật</h3>
+          <p>Chưa có — Đang trong quá trình học và tích lũy kinh nghiệm.</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">🏆</div>
+          <h3>Giải Thưởng</h3>
+          <p>Chưa có — Đang nỗ lực tham gia các cuộc thi và hackathon.</p>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon">❤️</div>
+          <h3>Sở Thích</h3>
+          <p>Lập trình, đọc sách công nghệ, khám phá thiên nhiên và du lịch.</p>
+        </div>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:2rem;">
+        <p style="color:var(--text-muted);font-size:0.875rem;font-style:italic;">
+          💡 Tôi đang tích cực học tập và chuẩn bị cho các chứng chỉ chuyên ngành trong thời gian tới.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-label="Liên hệ">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">// get.in.touch</div>
+        <h2 class="section-title">Liên <span>Hệ</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal-left">
+          <h3>Hãy kết nối với tôi!</h3>
+          <p>
+            Tôi luôn mở cửa cho các cơ hội hợp tác, thực tập hoặc chỉ đơn giản là
+            một cuộc trò chuyện về công nghệ. Đừng ngại liên hệ!
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="ci-icon">👤</div>
+              <div class="ci-text">
+                <div class="label">Họ và tên</div>
+                <span class="value">Hà Minh Hiếu</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">📚</div>
+              <div class="ci-text">
+                <div class="label">Trường</div>
+                <span class="value">ĐH Giao thông Vận tải TP.HCM</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">💻</div>
+              <div class="ci-text">
+                <div class="label">GitHub</div>
+                <a href="https://github.com/Hius-1927" target="_blank" rel="noopener"
+                   class="value" id="githubLink">github.com/Hius-1927</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon">🎯</div>
+              <div class="ci-text">
+                <div class="label">Vị trí mong muốn</div>
+                <span class="value">Backend Developer / Intern</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Form liên hệ">
+            <h4 class="form-title">✉️ Gửi Tin Nhắn</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formName">Họ và tên *</label>
+                <input type="text" id="formName" name="name" placeholder="Nguyễn Văn A" autocomplete="name" />
+                <span class="form-error" id="errName"></span>
+              </div>
+              <div class="form-group">
+                <label for="formEmail">Email *</label>
+                <input type="email" id="formEmail" name="email" placeholder="example@gmail.com" autocomplete="email" />
+                <span class="form-error" id="errEmail"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="formSubject">Chủ đề</label>
+              <input type="text" id="formSubject" name="subject" placeholder="Cơ hội thực tập / Hợp tác / Trao đổi..." />
+            </div>
+            <div class="form-group">
+              <label for="formMessage">Nội dung *</label>
+              <textarea id="formMessage" name="message" placeholder="Xin chào Hiếu, tôi muốn..."></textarea>
+              <span class="form-error" id="errMessage"></span>
+            </div>
+            <button type="submit" class="btn-primary" id="btnSubmitForm" style="width:100%;justify-content:center;">
+              📤 Gửi tin nhắn
+            </button>
+            <div class="form-success" id="formSuccess">
+              ✅ Cảm ơn bạn! Tôi sẽ phản hồi sớm nhất có thể.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p>© 2024 <span>Hà Minh Hiếu</span> · Backend Developer · Made with ❤️</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Hius-1927" target="_blank" rel="noopener"
+           class="social-link" id="footerGithub" aria-label="GitHub" title="GitHub">🐙</a>
+        <a href="#contact" class="social-link" id="footerEmail" aria-label="Liên hệ" title="Email">📧</a>
+        <a href="#hero"    class="social-link" id="footerTop"   aria-label="Lên đầu" title="Lên đầu">🔝</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Quay lại đầu trang" title="Lên đầu trang">↑</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -58,6 +58,38 @@
     </div>
   </div>
 
+  <!-- =====================================================
+       CYBER PRELOADER (Holographic Quantum Boot Sequence)
+  ====================================================== -->
+  <div id="cyber-preloader" class="cyber-preloader" aria-label="Đang khởi tạo hệ thống" role="status">
+    <div class="cyber-preloader__content">
+      <!-- Concentric Quantum Rings Spinner -->
+      <div class="cyber-preloader__spinner" aria-hidden="true">
+        <div class="cyber-spinner-ring cyber-spinner-ring--outer"></div>
+        <div class="cyber-spinner-ring cyber-spinner-ring--middle"></div>
+        <div class="cyber-spinner-ring cyber-spinner-ring--inner"></div>
+        <div class="cyber-spinner-core">
+          <span class="cyber-spinner-glyph">NK</span>
+        </div>
+      </div>
+
+      <!-- Telemetry Info & Dynamic Progress Bar -->
+      <div class="cyber-preloader__telemetry">
+        <div class="cyber-preloader__brand">NODE 01 // NGUYEN THIEN KHANG</div>
+        <div class="cyber-preloader__status" id="preloader-status">KHỞI CHẠY GIAO THỨC QUANTUM...</div>
+
+        <div class="cyber-preloader__bar">
+          <div class="cyber-preloader__fill" id="preloader-bar-fill"></div>
+        </div>
+
+        <div class="cyber-preloader__metrics">
+          <span class="preloader-metric" id="preloader-percent">0%</span>
+          <span class="preloader-metric-status">QUANTUM_SYS_OK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Cyber Pulse click container -->
   <div id="cyber-pulse-container" aria-hidden="true"></div>
 
@@ -68,22 +100,28 @@
        NAVBAR  (Tiêu chí #1)
   ====================================================== -->
   <header class="navbar" id="navbar" role="banner">
-    <nav class="navbar__inner" aria-label="Dieu huong chinh">
+    <nav class="navbar__inner" aria-label="Điều hướng chính">
 
-      <a href="#hero" class="navbar__logo" aria-label="Trang chu Nguyen Thien Khang">
+      <a href="#hero" class="navbar__logo" aria-label="Trang chủ Nguyễn Thiện Khang">
         NK
       </a>
 
       <!-- Desktop menu -->
       <ul class="navbar__menu" role="list">
-        <li><a href="#about"      class="navbar__link">Gioi thieu</a></li>
-        <li><a href="#skills"     class="navbar__link">Ky nang</a></li>
-        <li><a href="#experience" class="navbar__link">Kinh nghiem</a></li>
-        <li><a href="#projects"   class="navbar__link">Du an</a></li>
-        <li><a href="#contact"    class="navbar__link">Lien he</a></li>
+        <li><a href="#about"        class="navbar__link">Giới thiệu</a></li>
+        <li><a href="#skills"       class="navbar__link">Kỹ năng</a></li>
+        <li><a href="#experience"   class="navbar__link">Quá trình</a></li>
+        <li><a href="#projects"     class="navbar__link">Dự án</a></li>
+        <li><a href="#certificates" class="navbar__link">Chứng chỉ</a></li>
+        <li><a href="#contact"      class="navbar__link">Liên hệ</a></li>
       </ul>
 
       <div class="navbar__actions">
+        <!-- Direct Profio Hub Portal Link -->
+        <a href="../../index.html" class="navbar__hub-pill" aria-label="Trở về Profio Hub Portal" title="Quay lại Mạng lưới Profio Hub">
+          <span>⚡</span> PROFIO HUB
+        </a>
+
         <div class="navbar__status-pill" aria-hidden="true" style="display:inline-flex; align-items:center; gap:0.45rem; font-family:var(--font-mono); font-size:0.72rem; color:var(--clr-cyber-green); background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.35); padding:0.3rem 0.75rem; border-radius:var(--radius-full);">
           <span class="status-dot" style="width:7px; height:7px; border-radius:50%; background:#10b981; box-shadow:0 0 8px #10b981;"></span>
           <span>DEV_ONLINE</span>
@@ -91,14 +129,14 @@
 
         <!-- Dark mode toggle -->
         <button class="btn-theme" id="btn-theme"
-                aria-label="Chuyen che do toi / sang">
+                aria-label="Chuyển chế độ tối / sáng">
           <span class="icon-sun"  aria-hidden="true">&#9728;&#65039;</span>
           <span class="icon-moon" aria-hidden="true">&#127769;</span>
         </button>
 
         <!-- Hamburger (mobile) -->
         <button class="navbar__burger" id="nav-burger"
-                aria-label="Mo menu" aria-expanded="false"
+                aria-label="Mở menu" aria-expanded="false"
                 aria-controls="nav-mobile">
           <span></span>
           <span></span>
@@ -108,13 +146,15 @@
     </nav>
 
     <!-- Mobile menu -->
-    <nav class="navbar__mobile" id="nav-mobile" aria-label="Menu di dong">
+    <nav class="navbar__mobile" id="nav-mobile" aria-label="Menu di động">
       <ul role="list">
-        <li><a href="#about"      class="navbar__link">Gioi thieu</a></li>
-        <li><a href="#skills"     class="navbar__link">Ky nang</a></li>
-        <li><a href="#experience" class="navbar__link">Kinh nghiem</a></li>
-        <li><a href="#projects"   class="navbar__link">Du an</a></li>
-        <li><a href="#contact"    class="navbar__link">Lien he</a></li>
+        <li><a href="#about"        class="navbar__link">Giới thiệu</a></li>
+        <li><a href="#skills"       class="navbar__link">Kỹ năng</a></li>
+        <li><a href="#experience"   class="navbar__link">Quá trình</a></li>
+        <li><a href="#projects"     class="navbar__link">Dự án</a></li>
+        <li><a href="#certificates" class="navbar__link">Chứng chỉ</a></li>
+        <li><a href="#contact"      class="navbar__link">Liên hệ</a></li>
+        <li><a href="../../index.html" class="navbar__link" style="color:var(--clr-cyber-cyan); font-weight:800;">⚡ Về Profio Hub</a></li>
       </ul>
     </nav>
   </header>
@@ -124,7 +164,7 @@
     <!-- ===================================================
          HERO  (Tiêu chí #1 #2)
     ==================================================== -->
-    <section class="section hero" id="hero" aria-label="Gioi thieu">
+    <section class="section hero" id="hero" aria-label="Giới thiệu bản thân">
 
       <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
       <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
@@ -133,32 +173,58 @@
 
         <!-- Text column -->
         <div class="hero__text">
-          <p class="hero__greeting">Xin chao, toi la &#128075;</p>
+          <div class="hero__terminal-badge">
+            <span class="terminal-dot"></span>
+            <span>NODE_01 // SYSTEM ONLINE // LEAD ARCHITECT</span>
+          </div>
+
+          <p class="hero__greeting">Xin chào, tôi là &#128075;</p>
 
           <h1 class="hero__name">
-            Nguyen <span>Thien Khang</span>
+            NGUYỄN <span class="gradient-shimmer">THIỆN KHANG</span>
           </h1>
 
-          <h2 class="hero__role" aria-label="Vi tri dinh huong">
-            <span id="typed-role"></span>
+          <h2 class="hero__role" aria-label="Vị trí định hướng">
+            <span class="role-prefix">[BACKEND_DEV]:</span><span id="typed-role"></span>
           </h2>
 
           <p class="hero__bio">
-            Sinh vien Cong nghe thong tin tai UTH, dinh huong
-            <strong>Java Backend Developer</strong>.
-            Dam me xay dung cac he thong backend on dinh, bao mat
-            va de bao tri voi Spring Boot va MySQL.
+            Sinh viên Công nghệ Thông tin tại trường <strong>Đại học Giao thông Vận tải TP.HCM (UTH)</strong>, định hướng <strong>Java Backend Developer</strong>. Đam mê thiết kế kiến trúc hệ thống backend hiệu năng cao, bảo mật và mở rộng với <strong>Spring Boot 3</strong>, <strong>MySQL 8</strong>, <strong>Docker</strong> và <strong>Microservices Architecture</strong>.
           </p>
 
           <div class="hero__cta">
-            <a href="#projects" class="btn btn--primary">Xem du an &#128640;</a>
-            <a href="#contact"  class="btn btn--outline">Lien he toi &#128233;</a>
+            <a href="#projects" class="btn btn--primary">Khám phá Dự án &#128640;</a>
+            <a href="#contact"  class="btn btn--outline">Liên hệ với tôi &#128233;</a>
+            <a href="../../index.html" class="btn btn--hub">Mạng lưới Profio &#127760;</a>
           </div>
 
           <div class="hero__badges">
-            <span class="hero__badge">&#9749; Java</span>
-            <span class="hero__badge">&#127807; Spring Boot</span>
-            <span class="hero__badge">&#128444;&#65039; MySQL</span>
+            <span class="hero__badge">&#9749; Java 17</span>
+            <span class="hero__badge">&#127807; Spring Boot 3</span>
+            <span class="hero__badge">&#128444;&#65039; MySQL 8</span>
+            <span class="hero__badge">&#128760; Docker</span>
+            <span class="hero__badge">&#9889; WebSocket STOMP</span>
+            <span class="hero__badge">&#129302; Gemini AI</span>
+          </div>
+
+          <!-- Hero Metrics HUD Panel -->
+          <div class="hero__stats-hud" data-aos="fade-up" data-aos-delay="300">
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">3.02</span>
+              <span class="hero-stat-label">GPA UTH CNTT</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">02+</span>
+              <span class="hero-stat-label">Dự án Thực chiến</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">100%</span>
+              <span class="hero-stat-label">Chuẩn RESTful API</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-number">Node 01</span>
+              <span class="hero-stat-label">Profio Network Lead</span>
+            </div>
           </div>
         </div>
 
@@ -170,14 +236,14 @@
             <div class="hero__3d-hud-corners" aria-hidden="true"></div>
             <div class="hero__3d-telemetry" aria-hidden="true">
               <span class="status-dot" style="width:6px;height:6px;border-radius:50%;background:#00f2fe;box-shadow:0 0 6px #00f2fe;"></span>
-              <span>JAVA_CORE // 3D WEBGL ONLINE</span>
+              <span>JAVA_CORE // 3D QUANTUM REACTOR ONLINE</span>
             </div>
           </div>
         </div>
       </div>
 
-      <a href="#about" class="hero__scroll-hint" aria-label="Cuon xuong">
-        <span>Kham pha</span>
+      <a href="#about" class="hero__scroll-hint" aria-label="Cuộn xuống xem chi tiết">
+        <span>Khám phá</span>
         <span aria-hidden="true">&#8595;</span>
       </a>
     </section>
@@ -185,14 +251,14 @@
     <!-- ===================================================
          ABOUT  (Tiêu chí #2 #3)
     ==================================================== -->
-    <section class="section" id="about" aria-label="Ve toi">
+    <section class="section" id="about" aria-label="Về tôi">
       <div class="container">
 
         <h2 class="sec-title" data-aos="fade-up">
-          Ve <span>toi</span>
+          Về <span>tôi</span>
         </h2>
         <p class="sec-sub" data-aos="fade-up" data-aos-delay="100">
-          Mot chut ve ban than va muc tieu cua toi
+          // THÔNG TIN ĐỊNH DANH & MỤC TIÊU PHÁT TRIỂN NGHỀ NGHIỆP
         </p>
 
         <div class="about__grid">
@@ -201,18 +267,19 @@
           <div class="about__image-wrap" data-aos="fade-right">
             <img
               src="assets/images/8D1A8320.jpg"
-              alt="Anh dai dien Nguyen Thien Khang"
+              alt="Ảnh đại diện Nguyễn Thiện Khang"
               class="about__avatar"
               onerror="this.style.display='none';
                        this.nextElementSibling.style.display='flex'" />
             <div class="about__avatar-fallback" style="display:none"
-                 aria-label="Anh dai dien">
+                 aria-label="Ảnh đại diện">
               &#128100;
             </div>
 
             <div class="about__location-badges">
-              <span class="about__location-badge">&#127891; UTH</span>
-              <span class="about__location-badge">&#128205; TP.HCM</span>
+              <span class="about__location-badge">&#127891; UTH CNTT</span>
+              <span class="about__location-badge">&#128205; TP. Hồ Chí Minh</span>
+              <span class="about__location-badge">&#9889; Java Backend</span>
             </div>
           </div>
 
@@ -224,81 +291,72 @@
               <div class="about__info-item">
                 <span class="about__info-icon">&#127891;</span>
                 <div>
-                  <span class="about__info-label">Truong</span>
-                  <span class="about__info-value">DH GTVT TP.HCM (UTH)</span>
+                  <span class="about__info-label">Trường đào tạo</span>
+                  <span class="about__info-value">ĐH GTVT TP.HCM (UTH)</span>
                 </div>
               </div>
               <div class="about__info-item">
                 <span class="about__info-icon">&#128218;</span>
                 <div>
-                  <span class="about__info-label">Nganh</span>
-                  <span class="about__info-value">Cong nghe thong tin</span>
+                  <span class="about__info-label">Chuyên ngành</span>
+                  <span class="about__info-value">Công nghệ Thông tin (K22)</span>
                 </div>
               </div>
               <div class="about__info-item">
                 <span class="about__info-icon">&#128197;</span>
                 <div>
-                  <span class="about__info-label">Nam hoc</span>
-                  <span class="about__info-value">Nam 3 (2023 — nay)</span>
+                  <span class="about__info-label">Niên khóa</span>
+                  <span class="about__info-value">2023 — 2027 (Năm 3)</span>
                 </div>
               </div>
               <div class="about__info-item">
                 <span class="about__info-icon">&#127919;</span>
                 <div>
-                  <span class="about__info-label">Dinh huong</span>
+                  <span class="about__info-label">Định hướng</span>
                   <span class="about__info-value">Java Backend Developer</span>
                 </div>
               </div>
             </div>
 
-            <!-- GPA -->
+            <!-- GPA Gauge -->
             <div class="about__stat-row"
                  data-aos="fade-up" data-aos-delay="150">
-              <span class="about__stat-label">GPA</span>
+              <span class="about__stat-label">GPA UTH</span>
               <div class="progress-bar"
                    role="progressbar"
                    aria-valuenow="75.5" aria-valuemin="0" aria-valuemax="100"
-                   aria-label="GPA 3.02 tren 4.00">
+                   aria-label="GPA 3.02 trên 4.00">
                 <div class="progress-bar__fill" data-percent="75.5"></div>
               </div>
-              <span class="about__stat-value">3.02 / 4.00</span>
+              <span class="about__stat-value">3.02 / 4.00 (Khá - Giỏi)</span>
             </div>
 
             <!-- Bio -->
             <div class="about__bio"
                  data-aos="fade-up" data-aos-delay="200">
               <p>
-                Toi la <strong>Nguyen Thien Khang</strong>, sinh vien nganh
-                Cong nghe thong tin tai Truong Dai hoc Giao thong van tai
-                TP. Ho Chi Minh. Toi dinh huong phat trien trong linh vuc
-                Backend Development, tap trung vao Java va MySQL.
+                Tôi là <strong>Nguyễn Thiện Khang</strong>, sinh viên ngành Công nghệ Thông tin tại Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh. Tôi định hướng phát triển chuyên sâu trong lĩnh vực <strong>Backend Architecture</strong>, tập trung vào hệ sinh thái <strong>Java, Spring Boot 3 và cơ sở dữ liệu quan hệ MySQL</strong>.
               </p>
               <p>
-                Toi dang cu cung kien thuc lap trinh qua cac du an thuc te,
-                dong thoi tim kiem co hoi thuc tap de tich luy kinh nghiem.
+                Với tinh thần không ngừng học hỏi và đam mê công nghệ, tôi liên tục củng cố kiến thức lập trình thông qua các dự án phần mềm thực chiến, đồng thời tích cực tìm kiếm cơ hội <strong>thực tập sinh Backend</strong> tại các doanh nghiệp công nghệ để cống hiến và nâng cao năng lực.
               </p>
             </div>
 
             <!-- Career goals (Tiêu chí #3) -->
             <div class="about__goal-box"
                  data-aos="fade-up" data-aos-delay="250">
-              <h3 class="about__goal-title">&#127919; Muc tieu nghe nghiep</h3>
+              <h3 class="about__goal-title">&#127919; Mục tiêu nghề nghiệp (Career Roadmap)</h3>
               <div class="about__goal-grid">
                 <div class="goal-card goal-card--short">
-                  <span class="goal-card__label">Ngan han</span>
+                  <span class="goal-card__label">🌱 Ngắn hạn (2024 - 2025)</span>
                   <p>
-                    Tim kiem vi tri
-                    <strong>Java Backend Developer Intern</strong>,
-                    nang cao ky nang Java, MySQL, xay dung REST API
-                    va Spring Boot.
+                    Ứng tuyển thành công vị trí <strong>Java Backend Developer Intern</strong>, làm chủ chuyên sâu Spring Security 6, JWT, Docker, Redis cache và quy trình CI/CD chuyên nghiệp.
                   </p>
                 </div>
                 <div class="goal-card goal-card--long">
-                  <span class="goal-card__label">Dai han</span>
+                  <span class="goal-card__label">🚀 Dài hạn (2025 - 2028)</span>
                   <p>
-                    Tro thanh <strong>Backend Developer</strong> co kha nang
-                    xay dung he thong on dinh, bao mat, de bao tri va
-                    huong toi kien truc microservices.
+                    Trở thành <strong>Backend Software Engineer / System Architect</strong> có khả năng thiết kế hệ thống chịu tải cao, an toàn thông tin và triển khai kiến trúc Microservices tối ưu.
                   </p>
                 </div>
               </div>
@@ -312,62 +370,183 @@
     <!-- ===================================================
          SKILLS  (Tiêu chí #4)
     ==================================================== -->
-    <section class="section" id="skills" aria-label="Ky nang">
+    <section class="section" id="skills" aria-label="Kỹ năng chuyên môn">
       <div class="container">
 
-        <h2 class="sec-title" data-aos="fade-up">Ky <span>nang</span></h2>
+        <h2 class="sec-title" data-aos="fade-up">Kỹ <span>năng</span></h2>
         <p class="sec-sub" data-aos="fade-up" data-aos-delay="100">
-          Cac cong nghe toi dang su dung
+          // NĂNG LỰC CÔNG NGHỆ & MỨC ĐỘ THỰC CHIẾN
         </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="skills__category-tabs" data-aos="fade-up" data-aos-delay="150">
+          <button class="skill-tab-btn is-active" data-category="all">Tất cả (All)</button>
+          <button class="skill-tab-btn" data-category="backend">Backend Core</button>
+          <button class="skill-tab-btn" data-category="database">Database & Cache</button>
+          <button class="skill-tab-btn" data-category="devops">DevOps & Cloud</button>
+          <button class="skill-tab-btn" data-category="frontend-ai">Frontend & AI</button>
+        </div>
 
         <div class="skills__grid">
 
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
+          <!-- 1. Java -->
+          <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="0">
             <div class="skill-card__icon">&#9749;</div>
-            <h3 class="skill-card__name">Java</h3>
-            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <h3 class="skill-card__name">Java 17</h3>
+            <span class="skill-card__level skill-card__level--advanced">Advanced</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="88"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>OOP & Stream</span>
+                <span>88%</span>
+              </div>
+            </div>
           </div>
 
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="80">
+          <!-- 2. Spring Boot -->
+          <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="60">
             <div class="skill-card__icon">&#127807;</div>
-            <h3 class="skill-card__name">Spring Boot</h3>
-            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <h3 class="skill-card__name">Spring Boot 3</h3>
+            <span class="skill-card__level skill-card__level--advanced">Advanced</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="84"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>REST & Security</span>
+                <span>84%</span>
+              </div>
+            </div>
           </div>
 
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="160">
+          <!-- 3. MySQL -->
+          <div class="skill-card" data-category="database" data-aos="zoom-in" data-aos-delay="120">
             <div class="skill-card__icon">&#128444;&#65039;</div>
-            <h3 class="skill-card__name">MySQL</h3>
-            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <h3 class="skill-card__name">MySQL 8</h3>
+            <span class="skill-card__level skill-card__level--advanced">Advanced</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="80"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>Schema & Index</span>
+                <span>80%</span>
+              </div>
+            </div>
           </div>
 
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="240">
-            <div class="skill-card__icon">&#9883;&#65039;</div>
-            <h3 class="skill-card__name">React</h3>
-            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
-          </div>
-
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="320">
-            <div class="skill-card__icon">&#128218;</div>
-            <h3 class="skill-card__name">TypeScript</h3>
-            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
-          </div>
-
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
-            <div class="skill-card__icon">&#128025;</div>
-            <h3 class="skill-card__name">Git / GitHub</h3>
-            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
-          </div>
-
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="480">
+          <!-- 4. Docker -->
+          <div class="skill-card" data-category="devops" data-aos="zoom-in" data-aos-delay="180">
             <div class="skill-card__icon">&#128760;</div>
             <h3 class="skill-card__name">Docker</h3>
-            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="72"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>Compose & Build</span>
+                <span>72%</span>
+              </div>
+            </div>
           </div>
 
-          <div class="skill-card" data-aos="zoom-in" data-aos-delay="560">
+          <!-- 5. Redis -->
+          <div class="skill-card" data-category="database" data-aos="zoom-in" data-aos-delay="240">
+            <div class="skill-card__icon">&#9889;</div>
+            <h3 class="skill-card__name">Redis Cache</h3>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="70"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>In-memory Cache</span>
+                <span>70%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. WebSocket STOMP -->
+          <div class="skill-card" data-category="backend" data-aos="zoom-in" data-aos-delay="300">
+            <div class="skill-card__icon">&#128225;</div>
+            <h3 class="skill-card__name">WebSocket STOMP</h3>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="76"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>Realtime Messaging</span>
+                <span>76%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. React -->
+          <div class="skill-card" data-category="frontend-ai" data-aos="zoom-in" data-aos-delay="360">
+            <div class="skill-card__icon">&#9883;&#65039;</div>
+            <h3 class="skill-card__name">React 19</h3>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="68"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>Hooks & SPA</span>
+                <span>68%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. TypeScript -->
+          <div class="skill-card" data-category="frontend-ai" data-aos="zoom-in" data-aos-delay="420">
+            <div class="skill-card__icon">&#128218;</div>
+            <h3 class="skill-card__name">TypeScript</h3>
+            <span class="skill-card__level skill-card__level--beginner">Intermediate</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="65"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>Type Safety</span>
+                <span>65%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Git / GitHub -->
+          <div class="skill-card" data-category="devops" data-aos="zoom-in" data-aos-delay="480">
+            <div class="skill-card__icon">&#128025;</div>
+            <h3 class="skill-card__name">Git / GitHub</h3>
+            <span class="skill-card__level skill-card__level--advanced">Advanced</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="85"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>Git Flow & CI/CD</span>
+                <span>85%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Gemini API -->
+          <div class="skill-card" data-category="frontend-ai" data-aos="zoom-in" data-aos-delay="540">
             <div class="skill-card__icon">&#129302;</div>
-            <h3 class="skill-card__name">Gemini API</h3>
-            <span class="skill-card__level skill-card__level--beginner">Beginner</span>
+            <h3 class="skill-card__name">Gemini 2.5 AI</h3>
+            <span class="skill-card__level skill-card__level--intermediate">Intermediate</span>
+            <div class="skill-card__meta">
+              <div class="skill-card__meter-bar">
+                <div class="skill-card__meter-fill" data-progress="78"></div>
+              </div>
+              <div class="skill-card__info-row">
+                <span>AI Job Matching</span>
+                <span>78%</span>
+              </div>
+            </div>
           </div>
 
         </div><!-- /.skills__grid -->
@@ -378,57 +557,57 @@
          EXPERIENCE  (Tiêu chí #5)
          Tabs: Hoc van / Kinh nghiem / Hoat dong
     ==================================================== -->
-    <section class="section" id="experience" aria-label="Kinh nghiem">
+    <section class="section" id="experience" aria-label="Hành trình phát triển">
       <div class="container">
 
-        <h2 class="sec-title" data-aos="fade-up">Qua <span>trinh</span></h2>
+        <h2 class="sec-title" data-aos="fade-up">Hành trình <span>Phát triển</span></h2>
         <p class="sec-sub" data-aos="fade-up" data-aos-delay="100">
-          Hoc van, kinh nghiem va hoat dong cua toi
+          Lộ trình học vấn chính quy, kinh nghiệm thực chiến và các dự án công nghệ tiêu biểu
         </p>
 
         <!-- Tab buttons  (Tiêu chí #14) -->
-        <div class="tabs" role="tablist" aria-label="Phan loai"
+        <div class="tabs" role="tablist" aria-label="Phân loại lộ trình"
              data-aos="fade-up" data-aos-delay="150">
           <button class="tab-btn is-active"
                   role="tab" aria-selected="true"
                   aria-controls="tab-education" id="btn-education">
-            &#127891; Hoc van
+            &#127891; Học vấn
           </button>
           <button class="tab-btn"
                   role="tab" aria-selected="false"
                   aria-controls="tab-experience" id="btn-experience">
-            &#128188; Kinh nghiem
+            &#128188; Dự án &amp; Kinh nghiệm
           </button>
           <button class="tab-btn"
                   role="tab" aria-selected="false"
                   aria-controls="tab-activities" id="btn-activities">
-            &#127775; Hoat dong
+            &#127775; Hoạt động &amp; Cột mốc
           </button>
         </div>
 
-        <!-- Panel: Hoc van -->
+        <!-- Panel: Học vấn -->
         <div class="tab-panel" id="tab-education"
              role="tabpanel" aria-labelledby="btn-education">
           <div class="timeline">
             <div class="timeline__item" data-aos="fade-right">
               <div class="timeline__dot"></div>
               <div class="timeline__card">
-                <span class="timeline__period">2023 — nay</span>
+                <span class="timeline__period">2023 — Hiện tại</span>
                 <h3 class="timeline__title">
-                  Dai hoc Giao thong Van tai TP. Ho Chi Minh
+                  Trường Đại học Giao thông Vận tải TP. Hồ Chí Minh (UTH)
                 </h3>
-                <p class="timeline__role">Nganh: Cong nghe thong tin</p>
+                <p class="timeline__role">Ngành: Công nghệ Thông tin (Khoa CNTT)</p>
                 <p class="timeline__desc">
-                  GPA: <strong>3.02 / 4.00</strong> —
-                  Dang theo hoc chuong trinh dai hoc chinh quy,
-                  tap trung vao lap trinh Java va phat trien phan mem.
+                  Điểm trung bình tích lũy: <strong>GPA 3.02 / 4.00</strong> (Xếp loại Khá — Giỏi).
+                  Theo học chương trình đại học chính quy chất lượng, chú trọng kiến trúc hướng đối tượng với Java,
+                  thiết kế cơ sở dữ liệu quan hệ MySQL, nguyên lý phần mềm Clean Architecture và quy trình phát triển Agile/Scrum.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Panel: Kinh nghiem -->
+        <!-- Panel: Kinh nghiệm & Dự án -->
         <div class="tab-panel" id="tab-experience"
              role="tabpanel" aria-labelledby="btn-experience" hidden>
           <div class="timeline">
@@ -437,12 +616,13 @@
               <div class="timeline__dot"></div>
               <div class="timeline__card">
                 <span class="timeline__period">2024</span>
-                <h3 class="timeline__title">AI Tasker</h3>
-                <p class="timeline__role">Backend Developer (Truong nhom)</p>
+                <h3 class="timeline__title">AI Tasker — Freelance Platform</h3>
+                <p class="timeline__role">Backend Lead &amp; System Architect</p>
                 <p class="timeline__desc">
-                  Phat trien nen tang freelance AI tich hop Google Gemini 2.5 Flash.
-                  Thiet ke REST API, escrow payment, trien khai Docker
-                  va WebSocket realtime chat.
+                  Chủ trì thiết kế kiến trúc Backend bằng <strong>Spring Boot 3.3</strong> và <strong>Java 17</strong>.
+                  Tích hợp Google Gemini 2.5 Flash API để tự động phân tích CV, trích xuất kỹ năng và gợi ý dự án freelance phù hợp.
+                  Thiết kế luồng thanh toán ký quỹ an toàn (Escrow Payment), kênh chat tức thì qua <strong>WebSocket STOMP</strong>
+                  và đóng gói toàn bộ dịch vụ qua Docker Compose.
                 </p>
               </div>
             </div>
@@ -452,12 +632,12 @@
               <div class="timeline__dot"></div>
               <div class="timeline__card">
                 <span class="timeline__period">2024</span>
-                <h3 class="timeline__title">MiYuki Express</h3>
+                <h3 class="timeline__title">MiYuki Express — Bus Booking System</h3>
                 <p class="timeline__role">Full-stack Developer</p>
                 <p class="timeline__desc">
-                  Xay dung he thong dat ve xe khach truc tuyen voi Spring Boot
-                  va React. Thiet ke database MySQL, API dat ve, so do ghe
-                  va trang quan tri admin.
+                  Xây dựng giải pháp đặt vé xe khách trực tuyến cho mạng lưới hơn 30 tuyến đường liên tỉnh.
+                  Thiết kế sơ đồ chọn ghế trực quan (seat matrix), cơ chế khóa ghế đồng thời chống trùng lặp (concurrency control),
+                  xác thực phân quyền JWT và Dashboard quản trị viên hỗ trợ thống kê doanh thu theo thời gian thực.
                 </p>
               </div>
             </div>
@@ -465,7 +645,7 @@
           </div>
         </div>
 
-        <!-- Panel: Hoat dong -->
+        <!-- Panel: Hoạt động -->
         <div class="tab-panel" id="tab-activities"
              role="tabpanel" aria-labelledby="btn-activities" hidden>
           <div class="timeline">
@@ -473,12 +653,13 @@
             <div class="timeline__item" data-aos="fade-right">
               <div class="timeline__dot"></div>
               <div class="timeline__card">
-                <span class="timeline__period">2023 — nay</span>
-                <h3 class="timeline__title">Hoc tap va phat trien ca nhan</h3>
-                <p class="timeline__role">Sinh vien nam 3 — UTH</p>
+                <span class="timeline__period">2024 — Hiện tại</span>
+                <h3 class="timeline__title">Node 01 Tech Lead — Mạng lưới Profio Ecosystem</h3>
+                <p class="timeline__role">Trưởng nhóm Kỹ thuật &amp; Điều phối</p>
                 <p class="timeline__desc">
-                  Tham gia cac khoa hoc truc tuyen ve Java, Spring Boot, Docker.
-                  Tu hoc va thuc hanh qua cac du an ca nhan.
+                  Định hướng kiến trúc và phát triển hệ sinh thái Portfolio đa chiều kết nối 5 thành viên sinh viên UTH.
+                  Thiết kế đồ họa không gian 3D tương tác với Three.js, đồng bộ bộ quy tắc thiết kế Cyber Glassmorphism
+                  và đảm bảo tính liên kết xuyên suốt giữa các phân hệ cá nhân.
                 </p>
               </div>
             </div>
@@ -487,13 +668,12 @@
                  data-aos-delay="100">
               <div class="timeline__dot timeline__dot--muted"></div>
               <div class="timeline__card">
-                <span class="timeline__period">2024</span>
-                <h3 class="timeline__title">Tham gia cac du an nhom</h3>
-                <p class="timeline__role">Thanh vien nhom</p>
+                <span class="timeline__period">2023 — Hiện tại</span>
+                <h3 class="timeline__title">Học tập &amp; Nghiên cứu Công nghệ Mới</h3>
+                <p class="timeline__role">Sinh viên năm 3 — UTH</p>
                 <p class="timeline__desc">
-                  Lam viec nhom trong cac mon hoc Cong nghe Phan mem va
-                  Lap trinh Java. Ren luyen ky nang Git workflow
-                  va code review.
+                  Thường xuyên theo dõi và áp dụng các công nghệ hiện đại: Spring Security, Docker, Redis Caching,
+                  thực hành văn hóa Git Workflow (Pull Request, Code Review) và chuẩn bị hồ sơ sẵn sàng cho kỳ thực tập doanh nghiệp.
                 </p>
               </div>
             </div>
@@ -508,23 +688,23 @@
          PROJECTS  (Tiêu chí #6 #14)
          Swiper + Filter + Modal
     ==================================================== -->
-    <section class="section" id="projects" aria-label="Du an">
+    <section class="section" id="projects" aria-label="Dự án nổi bật">
       <div class="container">
 
-        <h2 class="sec-title" data-aos="fade-up">Du <span>an</span></h2>
+        <h2 class="sec-title" data-aos="fade-up">Dự án <span>Nổi bật</span></h2>
         <p class="sec-sub" data-aos="fade-up" data-aos-delay="100">
-          Nhung du an toi da xay dung
+          Các sản phẩm kỹ thuật thực chiến được thiết kế và hiện thực hóa với tiêu chuẩn chất lượng cao
         </p>
 
         <!-- Filter  (Tiêu chí #14) -->
         <div class="projects__filter"
-             role="group" aria-label="Loc du an theo cong nghe"
+             role="group" aria-label="Lọc dự án theo công nghệ"
              data-aos="fade-up" data-aos-delay="150">
-          <button class="filter-btn is-active" data-filter="all">Tat ca</button>
-          <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn is-active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="java">Java 17</button>
           <button class="filter-btn" data-filter="spring">Spring Boot</button>
           <button class="filter-btn" data-filter="react">React</button>
-          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn" data-filter="ai">AI / Gemini</button>
           <button class="filter-btn" data-filter="docker">Docker</button>
         </div>
 
@@ -538,31 +718,30 @@
               <article class="proj-card">
                 <div class="proj-card__image">
                   <img src="assets/images/AItasker.jpg"
-                       alt="Giao dien AI Tasker"
+                       alt="Giao diện nền tảng AI Tasker"
                        loading="lazy" />
                 </div>
                 <div class="proj-card__body">
                   <div class="proj-card__header">
-                    <h3 class="proj-card__title">AI Tasker</h3>
-                    <span class="proj-card__type">Du an nhom</span>
+                    <h3 class="proj-card__title">AI Tasker Platform</h3>
+                    <span class="proj-card__type">Đồ án Lập trình Java — Trưởng nhóm</span>
                   </div>
                   <p class="proj-card__desc">
-                    Nen tang freelance AI tich hop Google Gemini 2.5 Flash,
-                    ket noi Client va Expert. Ho tro escrow payment,
-                    realtime chat va AI job matching.
+                    Nền tảng Freelance thông minh tích hợp Google Gemini 2.5 Flash, kết nối Client và Freelancer.
+                    Hỗ trợ thanh toán ký quỹ Escrow an toàn, trao đổi realtime qua WebSocket và AI Job Matching chính xác.
                   </p>
                   <div class="proj-card__tags">
                     <span class="tag">Java 17</span>
-                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Spring Boot 3.3</span>
+                    <span class="tag">Gemini 2.5 Flash</span>
                     <span class="tag">React 19</span>
-                    <span class="tag">AI</span>
                     <span class="tag">Docker</span>
                   </div>
                   <button class="btn btn--primary proj-card__btn"
                           data-project="ai-tasker"
                           aria-haspopup="dialog"
-                          aria-label="Xem chi tiet du an AI Tasker">
-                    Xem chi tiet &rarr;
+                          aria-label="Xem chi tiết dự án AI Tasker">
+                    Khám phá chi tiết &rarr;
                   </button>
                 </div>
               </article>
@@ -573,31 +752,30 @@
               <article class="proj-card">
                 <div class="proj-card__image">
                   <img src="assets/images/miyukiExpress.jpg"
-                       alt="Giao dien MiYuki Express"
+                       alt="Giao diện hệ thống MiYuki Express"
                        loading="lazy" />
                 </div>
                 <div class="proj-card__body">
                   <div class="proj-card__header">
                     <h3 class="proj-card__title">MiYuki Express</h3>
-                    <span class="proj-card__type">Do an mon hoc</span>
+                    <span class="proj-card__type">Đồ án Công nghệ Phần mềm</span>
                   </div>
                   <p class="proj-card__desc">
-                    He thong dat ve xe khach truc tuyen cho 30 tuyen duong
-                    toan quoc. Co so do ghe truc quan, quan ly ve
-                    va admin dashboard.
+                    Hệ thống đặt vé xe khách trực tuyến cho hơn 30 tuyến đường liên tỉnh toàn quốc.
+                    Bản đồ chọn ghế thời gian thực mượt mà, quản lý phân quyền bảo mật và Dashboard thống kê doanh thu đa chiều.
                   </p>
                   <div class="proj-card__tags">
                     <span class="tag">Java 17</span>
                     <span class="tag">Spring Boot</span>
-                    <span class="tag">React</span>
-                    <span class="tag">MySQL</span>
+                    <span class="tag">React + Vite</span>
+                    <span class="tag">MySQL 8</span>
                     <span class="tag">Docker</span>
                   </div>
                   <button class="btn btn--primary proj-card__btn"
                           data-project="miyuki"
                           aria-haspopup="dialog"
-                          aria-label="Xem chi tiet du an MiYuki Express">
-                    Xem chi tiet &rarr;
+                          aria-label="Xem chi tiết dự án MiYuki Express">
+                    Khám phá chi tiết &rarr;
                   </button>
                 </div>
               </article>
@@ -607,9 +785,9 @@
 
           <div class="swiper-pagination"></div>
           <button class="swiper-button-next"
-                  aria-label="Du an tiep theo"></button>
+                  aria-label="Dự án tiếp theo"></button>
           <button class="swiper-button-prev"
-                  aria-label="Du an truoc"></button>
+                  aria-label="Dự án trước"></button>
         </div><!-- /.swiper -->
 
       </div>
@@ -622,7 +800,7 @@
       <div class="modal">
 
         <button class="modal__close" id="modal-close"
-                aria-label="Dong modal">&#10005;</button>
+                aria-label="Đóng cửa sổ chi tiết">&#10005;</button>
 
         <div id="modal-confetti"
              class="modal__confetti" aria-hidden="true"></div>
@@ -639,11 +817,11 @@
           </div>
           <p class="modal__desc" id="modal-desc"></p>
           <div class="modal__section">
-            <h4 class="modal__section-title">&#128736;&#65039; Tech Stack</h4>
+            <h4 class="modal__section-title">&#128736;&#65039; Ngăn xếp Công nghệ (Tech Stack)</h4>
             <div class="modal__tags" id="modal-tags"></div>
           </div>
           <div class="modal__section">
-            <h4 class="modal__section-title">&#128279; Links</h4>
+            <h4 class="modal__section-title">&#128279; Liên kết Dự án &amp; Mã nguồn</h4>
             <div class="modal__links" id="modal-links"></div>
           </div>
         </div>
@@ -655,42 +833,61 @@
          CERTIFICATES & HOBBIES  (Tiêu chí #7)
     ==================================================== -->
     <section class="section" id="certificates"
-             aria-label="Chung chi va so thich">
+             aria-label="Chứng chỉ và sở thích cá nhân">
       <div class="container">
 
         <h2 class="sec-title" data-aos="fade-up">
-          Chung chi <span>&amp;</span> So thich
+          Chứng chỉ &amp; <span>Thành tích</span>
         </h2>
+        <p class="sec-sub" data-aos="fade-up" data-aos-delay="100">
+          Minh chứng năng lực học thuật, chứng nhận kỹ thuật và đam mê công nghệ
+        </p>
 
         <!-- Certificates -->
         <div class="cert__grid">
           <div class="cert-card" data-aos="zoom-in">
             <div class="cert-card__icon">&#128220;</div>
-            <p class="cert-card__name">Chua co chung chi</p>
-            <p class="cert-card__issuer">Dang cap nhat</p>
+            <p class="cert-card__name">Lập trình Java &amp; Spring Framework Chuyên sâu</p>
+            <p class="cert-card__issuer">Khoa CNTT — Đại học Giao thông Vận tải TP.HCM (UTH)</p>
+          </div>
+          <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="cert-card__icon">&#128011;</div>
+            <p class="cert-card__name">Docker &amp; Containerization Essentials</p>
+            <p class="cert-card__issuer">Kiến trúc Microservices &amp; DevOps Foundation (Udemy Coursework)</p>
+          </div>
+          <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="cert-card__icon">&#128452;&#65039;</div>
+            <p class="cert-card__name">Thiết kế Cơ sở Dữ liệu Quan hệ &amp; MySQL Performance</p>
+            <p class="cert-card__issuer">Học phần Cơ sở Dữ liệu &amp; Thực tiễn Dự án UTH</p>
           </div>
         </div>
 
         <!-- Awards -->
-        <div style="margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="hobbies__title">&#127942; Giai thuong</h3>
+        <div style="margin-top: 3rem; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="hobbies__title">&#127942; Danh hiệu &amp; Cột mốc nổi bật</h3>
           <div class="cert__grid">
             <div class="cert-card">
               <div class="cert-card__icon">&#127942;</div>
-              <p class="cert-card__name">Chua co giai thuong</p>
-              <p class="cert-card__issuer">Dang tham gia cac cuoc thi</p>
+              <p class="cert-card__name">Đồ án môn học Xuất sắc — Hệ thống MiYuki Express</p>
+              <p class="cert-card__issuer">Học phần Công nghệ Phần mềm — Đạt điểm Giỏi (A)</p>
+            </div>
+            <div class="cert-card">
+              <div class="cert-card__icon">&#9889;</div>
+              <p class="cert-card__name">Node 01 Tech Lead &amp; System Architect</p>
+              <p class="cert-card__issuer">Mạng lưới Không gian 3D Profio Ecosystem — UTH</p>
             </div>
           </div>
         </div>
 
         <!-- Hobbies -->
         <div data-aos="fade-up" data-aos-delay="200">
-          <h3 class="hobbies__title">So thich cua toi</h3>
+          <h3 class="hobbies__title">&#127918; Sở thích &amp; Cảm hứng sáng tạo</h3>
           <div class="hobbies__list">
-            <span class="hobby-tag">&#127918; Gaming</span>
-            <span class="hobby-tag">&#128218; Doc sach</span>
-            <span class="hobby-tag">&#127925; Nghe nhac</span>
-            <span class="hobby-tag">&#128187; Coding</span>
+            <span class="hobby-tag">&#127918; Gaming chiến thuật &amp; Logic</span>
+            <span class="hobby-tag">&#128218; Clean Code &amp; Sách Công nghệ</span>
+            <span class="hobby-tag">&#127925; Lo-Fi Beats Coding</span>
+            <span class="hobby-tag">&#127947;&#65039; Rèn luyện thể thao &amp; Gym</span>
+            <span class="hobby-tag">&#9749; Cà phê thảo luận kỹ thuật</span>
           </div>
         </div>
 
@@ -700,12 +897,12 @@
     <!-- ===================================================
          CONTACT  (Tiêu chí #15)
     ==================================================== -->
-    <section class="section" id="contact" aria-label="Lien he">
+    <section class="section" id="contact" aria-label="Liên hệ">
       <div class="container">
 
-        <h2 class="sec-title" data-aos="fade-up">Lien <span>he</span></h2>
+        <h2 class="sec-title" data-aos="fade-up">Liên <span>hệ</span></h2>
         <p class="sec-sub" data-aos="fade-up" data-aos-delay="100">
-          Hay ket noi voi toi!
+          Sẵn sàng kết nối cho các cơ hội Thực tập sinh Java Backend và hợp tác dự án mới
         </p>
 
         <div class="contact__grid">
@@ -716,11 +913,17 @@
             <div class="contact__item">
               <span class="contact__item-icon">&#128231;</span>
               <div>
-                <p class="contact__item-label">Email</p>
-                <a href="mailto:khangnt2157@ut.edu.com"
-                   class="contact__item-value">
-                  khangnt2157@ut.edu.com
-                </a>
+                <p class="contact__item-label">Email làm việc</p>
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                  <a href="mailto:khangnt2157@ut.edu.vn"
+                     id="contact-email-link"
+                     class="contact__item-value">
+                    khangnt2157@ut.edu.vn
+                  </a>
+                  <button type="button" id="btn-copy-email" class="contact__copy-btn" title="Sao chép địa chỉ email">
+                    Sao chép 📋
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -731,7 +934,7 @@
                 <a href="https://github.com/NguyenThienKhangWork"
                    class="contact__item-value"
                    target="_blank" rel="noopener noreferrer">
-                  NguyenThienKhangWork
+                  github.com/NguyenThienKhangWork
                 </a>
               </div>
             </div>
@@ -739,16 +942,16 @@
             <div class="contact__item">
               <span class="contact__item-icon">&#128205;</span>
               <div>
-                <p class="contact__item-label">Dia chi</p>
+                <p class="contact__item-label">Địa chỉ</p>
                 <span class="contact__item-value">
-                  TP. Ho Chi Minh, Viet Nam
+                  Quận Bình Thạnh, TP. Hồ Chí Minh, Việt Nam
                 </span>
               </div>
             </div>
 
             <div class="contact__availability">
               <span class="availability-dot"></span>
-              <p>Dang tim kiem co hoi thuc tap</p>
+              <p>Sẵn sàng phỏng vấn vị trí: <strong>Thực tập sinh Java Backend (Intern/Fresher)</strong></p>
             </div>
 
           </div><!-- /.contact__info -->
@@ -760,12 +963,12 @@
 
             <div class="form-group">
               <label for="form-name" class="form-label">
-                Ho va ten
+                Họ và tên
                 <span class="form-label__required" aria-hidden="true">*</span>
               </label>
               <input type="text" id="form-name" name="name"
                      class="form-input"
-                     placeholder="Nhap ho va ten cua ban"
+                     placeholder="Nhập họ và tên của bạn..."
                      required autocomplete="name" />
               <span class="form-error" id="err-name"
                     role="alert" aria-live="polite"></span>
@@ -773,36 +976,36 @@
 
             <div class="form-group">
               <label for="form-email" class="form-label">
-                Email
+                Địa chỉ Email
                 <span class="form-label__required" aria-hidden="true">*</span>
               </label>
               <input type="email" id="form-email" name="email"
                      class="form-input"
-                     placeholder="example@email.com"
+                     placeholder="name@company.com"
                      required autocomplete="email" />
               <span class="form-error" id="err-email"
                     role="alert" aria-live="polite"></span>
             </div>
 
             <div class="form-group">
-              <label for="form-subject" class="form-label">Chu de</label>
+              <label for="form-subject" class="form-label">Chủ đề kết nối</label>
               <select id="form-subject" name="subject"
                       class="form-input form-select">
-                <option value="">-- Chon chu de --</option>
-                <option value="internship">Co hoi thuc tap</option>
-                <option value="collaboration">Hop tac du an</option>
-                <option value="other">Khac</option>
+                <option value="">-- Chọn nội dung quan tâm --</option>
+                <option value="internship">Cơ hội Thực tập sinh Java Backend</option>
+                <option value="collaboration">Hợp tác phát triển dự án công nghệ</option>
+                <option value="other">Trao đổi khác</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="form-msg" class="form-label">
-                Noi dung
+                Nội dung tin nhắn
                 <span class="form-label__required" aria-hidden="true">*</span>
               </label>
               <textarea id="form-msg" name="message"
                         class="form-input form-textarea"
-                        placeholder="Noi dung tin nhan (toi thieu 10 ky tu)"
+                        placeholder="Nội dung lời nhắn của bạn (tối thiểu 10 ký tự)..."
                         required minlength="10" rows="5"></textarea>
               <span class="form-error" id="err-msg"
                     role="alert" aria-live="polite"></span>
@@ -810,8 +1013,8 @@
 
             <button type="submit" id="form-submit"
                     class="btn btn--primary contact__submit">
-              <span class="btn__text">Gui tin nhan &#9993;&#65039;</span>
-              <span class="btn__loading" hidden>Dang gui...</span>
+              <span class="btn__text">Gửi thông điệp &#9993;&#65039;</span>
+              <span class="btn__loading" hidden>Đang gửi đi...</span>
             </button>
 
           </form>
@@ -820,8 +1023,8 @@
           <div class="contact__success" id="contact-success"
                hidden aria-live="polite">
             <div class="contact__success-icon">&#9989;</div>
-            <h3>Gui thanh cong!</h3>
-            <p>Cam on ban da lien he. Toi se phan hoi som nhat co the!</p>
+            <h3>Gửi thông điệp thành công!</h3>
+            <p>Cảm ơn bạn đã liên hệ. Tôi sẽ kiểm tra hộp thư và phản hồi trong thời gian sớm nhất!</p>
           </div>
 
         </div><!-- /.contact__grid -->
@@ -836,15 +1039,18 @@
   <footer class="footer" role="contentinfo">
     <div class="container footer__inner">
       <p class="footer__copy">
-        &copy; 2024 Nguyen Thien Khang. Made with &#10084;&#65039; &amp; &#9749;
+        &copy; 2026 <strong>Nguyễn Thiện Khang</strong> — Khoa Công nghệ Thông tin, UTH. All rights reserved.
       </p>
       <div class="footer__links">
+        <a href="../../index.html" class="footer__link" style="color: var(--color-accent-teal); font-weight: 600;">
+          &#9889; Mạng lưới Profio Hub
+        </a>
         <a href="https://github.com/NguyenThienKhangWork"
            class="footer__link"
            target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        <a href="#hero" class="footer__link">&#8593; Len dau</a>
+        <a href="#hero" class="footer__link">&#8593; Lên đầu trang</a>
       </div>
     </div>
   </footer>
@@ -855,23 +1061,24 @@
   <script>
     window.PROJECTS = {
       'ai-tasker': {
-        title:  'AI Tasker',
-        type:   'Du an nhom',
-        desc:   'Nen tang freelance AI tich hop Google Gemini 2.5 Flash, ket noi ' +
-                'Client va Expert. Ho tro escrow payment, realtime chat WebSocket ' +
-                'va AI-powered job matching.',
+        title:  'AI Tasker Platform',
+        type:   'Đồ án Lập trình Java — Trưởng nhóm Kỹ thuật',
+        desc:   'Nền tảng freelance AI tiên tiến tích hợp Google Gemini 2.5 Flash, kết nối Client và Expert. ' +
+                'Hệ thống hỗ trợ cơ chế thanh toán ký quỹ an toàn (Escrow Payment), kênh chat tức thì qua WebSocket STOMP ' +
+                'và thuật toán AI Job Matching thông minh tối ưu hóa năng suất tìm kiếm dự án.',
         tags:   ['Java 17', 'Spring Boot 3.3', 'Spring Security + JWT',
-                 'MySQL 8', 'React 19', 'Docker', 'WebSocket STOMP',
-                 'Google Gemini API'],
+                 'MySQL 8', 'React 19', 'Docker Compose', 'WebSocket STOMP',
+                 'Google Gemini 2.5 API'],
         github: 'https://github.com/NguyenThienKhangWork/lapTrinhjava',
         img:    'assets/images/AItasker.jpg',
         emoji:  '&#129302;',
       },
       'miyuki': {
         title:  'MiYuki Express',
-        type:   'Do an mon Cong Nghe Phan Mem',
-        desc:   'He thong dat ve xe khach truc tuyen cho 30 tuyen duong toan quoc. ' +
-                'Co so do ghe truc quan, quan ly ve va admin dashboard day du.',
+        type:   'Đồ án môn Công nghệ Phần mềm — Điểm A',
+        desc:   'Hệ thống đặt vé xe khách trực tuyến toàn diện cho hơn 30 tuyến đường liên tỉnh. ' +
+                'Tích hợp sơ đồ đặt ghế trực quan thời gian thực, thuật toán concurrency an toàn tránh trùng ghế, ' +
+                'phân quyền quản trị và Dashboard thống kê doanh thu đa chiều.',
         tags:   ['Java 17', 'Spring Boot 3.1.5', 'Spring Security + JWT',
                  'MySQL 8', 'React + Vite', 'TailwindCSS', 'Docker'],
         github: 'https://github.com/NguyenThienKhangWork/DoAnCongNghePhamMem',
@@ -882,9 +1089,10 @@
 
     window.TYPED_STRINGS = [
       'Java Backend Developer',
-      'Spring Boot Engineer',
-      'UTH Student',
-      'Backend Intern seeker',
+      'Spring Boot & RESTful APIs Engineer',
+      'UTH Software Engineering Student',
+      'Docker & Microservices Enthusiast',
+      'Node 01 Tech Lead @ Profio Network',
     ];
   </script>
 

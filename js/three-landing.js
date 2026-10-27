@@ -112,10 +112,10 @@
     var teamNodes = [];
     var teamData = [
       { name: 'Khang', role: 'Java Backend', color: 0x00f2fe, radius: 82, speed: 0.009, angle: 0 },
-      { name: 'Member 2', role: 'Frontend', color: 0xa855f7, radius: 95, speed: 0.007, angle: (Math.PI * 2 / 5) * 1 },
-      { name: 'Member 3', role: 'Fullstack', color: 0x00ffcc, radius: 88, speed: 0.008, angle: (Math.PI * 2 / 5) * 2 },
-      { name: 'Member 4', role: 'UI/UX Dev', color: 0x38bdf8, radius: 102, speed: 0.006, angle: (Math.PI * 2 / 5) * 3 },
-      { name: 'Member 5', role: 'Mobile / AI', color: 0xf43f5e, radius: 92, speed: 0.0075, angle: (Math.PI * 2 / 5) * 4 }
+      { name: 'Tiến Thịnh', role: 'Java / Frontend', color: 0xa855f7, radius: 95, speed: 0.007, angle: (Math.PI * 2 / 5) * 1 },
+      { name: 'Văn Hiếu', role: 'Data Engineer', color: 0x00ffcc, radius: 88, speed: 0.008, angle: (Math.PI * 2 / 5) * 2 },
+      { name: 'Minh Hiếu', role: 'Backend Dev', color: 0x38bdf8, radius: 102, speed: 0.006, angle: (Math.PI * 2 / 5) * 3 },
+      { name: 'Quỳnh Như', role: 'Game Dev / Java', color: 0xf43f5e, radius: 92, speed: 0.0075, angle: (Math.PI * 2 / 5) * 4 }
     ];
 
     teamData.forEach(function (node) {
