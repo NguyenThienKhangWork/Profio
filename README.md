@@ -1,27 +1,27 @@
 <div align="center">
 
 # ⚡ PROFIO — NEXT-GEN TECH PORTFOLIO NETWORK
-### 🌐 Mạng Lưới Portfolio Tương Tác 3D & Cyber HUD Của 5 Kỹ Sư CNTT — UTH
+### 🌐 Mạng Lưới Portfolio Tương Tác 3D & Cyber HUD Của 6 Kỹ Sư CNTT — UTH
 
 [![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub_Pages-2ea44f?style=for-the-badge&logo=github)](https://nguyenthienkhangwork.github.io/Profio/)
 [![Three.js](https://img.shields.io/badge/3D_Engine-Three.js_r128-000000?style=for-the-badge&logo=three.dot.js)](https://threejs.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![CSS3](https://img.shields.io/badge/Styles-CSS3_Modern-1572B6?style=for-the-badge&logo=css3)](https://www.w3.org/Style/CSS/)
-[![Team Members](https://img.shields.io/badge/Active_Nodes-5%2F5_Online-00f2fe?style=for-the-badge)](https://nguyenthienkhangwork.github.io/Profio/)
-[![Score Target](https://img.shields.io/badge/Rubric_Score-19%2F19_Ti%C3%AAu_Ch%C3%AD_(10.0)-8A2BE2?style=for-the-badge)](https://github.com/NguyenThienKhangWork/Profio)
+[![Team Members](https://img.shields.io/badge/Active_Nodes-6%2F6_Online-00f2fe?style=for-the-badge)](https://nguyenthienkhangwork.github.io/Profio/)
+[![Score Target](https://img.shields.io/badge/Rubric_Score-19%2F19_Tiêu_Chí_(10.0)-8A2BE2?style=for-the-badge)](https://github.com/NguyenThienKhangWork/Profio)
 
 <p align="center">
   <b>Đồ án Giữa kỳ môn Lập trình Web — Khoa Công nghệ Thông tin</b><br>
   <b>Trường Đại học Giao thông Vận tải TP.HCM (UTH)</b>
 </p>
 
-[🌐 Trải Nghiệm Trực Tiếp (Live Demo)](#-live-demo--mạng-lưới-5-nodes) • [👥 Đội Ngũ 5 Thành Viên](#-mạng-lưới-thành-viên-5-nodes) • [✨ Tính Năng Nổi Bật](#-tính-năng-nổi-bật--công-nghệ) • [📊 Tiêu Chí Chấm Điểm (19/19)](#-bảng-đối-chiếu-1919-tiêu-chí-chấm-điểm) • [🚀 Cài Đặt & Chạy Local](#-hướng-dẫn-cài-đặt--chạy-cục-bộ)
+[🌐 Trải Nghiệm Trực Tiếp (Live Demo)](#-live-demo--mạng-lưới-6-nodes) • [👥 Đội Ngũ 6 Thành Viên](#-mạng-lưới-thành-viên-6-nodes) • [✨ Tính Năng Nổi Bật](#-tính-năng-nổi-bật--công-nghệ) • [📊 Tiêu Chí Chấm Điểm (19/19)](#-bảng-đối-chiếu-1919-tiêu-chí-chấm-điểm) • [🚀 Cài Đặt & Chạy Local](#-hướng-dẫn-cài-đặt--chạy-cục-bộ)
 
 ---
 
 </div>
 
-## 🌐 Live Demo — Mạng Lưới 5 Nodes
+## 🌐 Live Demo — Mạng Lưới 6 Nodes
 
 Hệ thống được triển khai tự động qua **GitHub Pages** với kiến trúc đa tầng mượt mà, tốc độ phản hồi cao, hỗ trợ chuyển đổi giao diện Dark/Light Mode và 3D WebGL:
 
@@ -33,10 +33,11 @@ Hệ thống được triển khai tự động qua **GitHub Pages** với kiế
 | 👤 **Node 03** | **Vũ Văn Hiếu** | Data Engineer | Python, SQL, C++, Data Pipeline | ![Active](https://img.shields.io/badge/ACTIVE-10b981?style=flat-square) | [Xem Node ➜](https://nguyenthienkhangwork.github.io/Profio/members/VanHieu/) |
 | 👤 **Node 04** | **Hà Minh Hiếu** | Backend Developer | C++, Python, Java, Backend Systems | ![Active](https://img.shields.io/badge/ACTIVE-10b981?style=flat-square) | [Xem Node ➜](https://nguyenthienkhangwork.github.io/Profio/members/minhhieu/) |
 | 👤 **Node 05** | **Nguyễn Quỳnh Như** | Game Dev / Lập trình viên | Java, C#, Unity, React, Spring Boot | ![Active](https://img.shields.io/badge/ACTIVE-10b981?style=flat-square) | [Xem Node ➜](https://nguyenthienkhangwork.github.io/Profio/members/quynhnhu/) |
+| 👤 **Node 06** | **Bùi Đình Hải** | Full Stack Developer | HTML/CSS/JS, React, Node.js, MySQL | ![Active](https://img.shields.io/badge/ACTIVE-10b981?style=flat-square) | [Xem Node ➜](https://nguyenthienkhangwork.github.io/Profio/members/dinhhai/) |
 
 ---
 
-## 👥 Mạng Lưới Thành Viên (5 Nodes)
+## 👥 Mạng Lưới Thành Viên (6 Nodes)
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -47,6 +48,7 @@ Hệ thống được triển khai tự động qua **GitHub Pages** với kiế
 │ Node 03       │ Vũ Văn Hiếu              │ Data Engineer               │ Hệ thống TTQL │
 │ Node 04       │ Hà Minh Hiếu             │ Backend Developer           │ CNTT UTH      │
 │ Node 05       │ Nguyễn Quỳnh Như         │ Game Dev / Lập trình viên   │ CNTT UTH      │
+│ Node 06       │ Bùi Đình Hải             │ Full Stack Developer         │ CNTT UTH      │
 └───────────────┴──────────────────────────┴─────────────────────────────┴───────────────┘
 ```
 
@@ -109,10 +111,23 @@ Hệ thống được triển khai tự động qua **GitHub Pages** với kiế
 
 ---
 
+### 6. 👤 Node 06 — Bùi Đình Hải
+- **Định hướng chuyên môn:** Full Stack Web Developer
+- **Học vấn:** Sinh viên Khoa Công nghệ Thông tin — Đại học Giao thông Vận tải TP.HCM (UTH)
+- **Email:** `buidinhhai294@gmail.com` | **Điện thoại:** `0378 003 753`
+- **Kỹ năng cốt lõi:** HTML5, CSS3, JavaScript / TypeScript, React / Next.js, Node.js / NestJS, REST API, MySQL / PostgreSQL, Docker, Git.
+- **Dự án thực chiến tiêu biểu:**
+  1. **Web Portfolio cá nhân:** Giao diện portfolio tương tác với hiệu ứng liquid animation, hệ thống satellite orbit menu và popup nội dung đa phương tiện.
+  2. **Full Stack Web Application:** Ứng dụng web đa lớp tích hợp Frontend / Backend / Database hoàn chỉnh.
+- **Đặc trưng giao diện:** Thiết kế dạng vệ tinh quay quanh ảnh chân dung (Satellite Orbit UI), hiệu ứng sóng lỏng SVG (Liquid Wave), background chữ cuộn kỹ thuật số và popup nội dung nhiều tab mượt mà.
+- **Thư mục bài làm:** [`members/dinhhai/`](members/dinhhai/)
+
+---
+
 ## ✨ Tính Năng Nổi Bật & Công Nghệ
 
 ### 🌌 1. Không gian 3D WebGL tương tác (Three.js Engine)
-- Render mạng lưới hạt lượng tử 3D WebGL với hệ thống kết nối node ánh sáng neon và chuyển động camera theo tọa độ chuột (**Mouse Parallax 3D**).
+- Render mạng lưới hạt lượng tử 3D WebGL với **6 nodes** xoay quanh lõi hologram, hệ thống kết nối ánh sáng neon và chuyển động camera theo tọa độ chuột (**Mouse Parallax 3D**).
 - Tại Node 01 (Khang): Tích hợp **Lõi năng lượng nguyên tử 3D Holographic Quantum Reactor** với các vòng xoay Gimbal Gyroscope và khối lập phương công nghệ bay lơ lửng.
 
 ### ⏳ 2. Màn hình Khởi động Cyber Preloader
@@ -135,6 +150,10 @@ Hệ thống được triển khai tự động qua **GitHub Pages** với kiế
 - Thư mục riêng biệt cho từng thành viên trong `/members/`, đảm bảo mã nguồn của mỗi cá nhân không bị xung đột.
 - Tích hợp sẵn bộ khởi tạo `_template/` chuẩn hóa, giúp thành viên mới tích hợp bài làm chỉ trong vài phút.
 
+### 🛸 7. Node 06 — Satellite Orbit UI (Bùi Đình Hải)
+- Giao diện độc đáo dạng **vệ tinh quay quanh ảnh chân dung** với 6 satellite menu xoay liên tục theo quỹ đạo.
+- Hiệu ứng **Liquid Wave SVG** bao quanh ảnh cùng với background từ cuộn kỹ thuật số và popup nội dung đa tab mượt mà.
+
 ---
 
 ## 🛠️ Tech Stack & Thư Viện
@@ -142,10 +161,10 @@ Hệ thống được triển khai tự động qua **GitHub Pages** với kiế
 | Danh mục | Công nghệ | Phiên bản | Mục đích sử dụng |
 | :--- | :--- | :---: | :--- |
 | **Ngôn ngữ nền tảng** | HTML5 Semantic, Modern CSS3, JavaScript ES6+ | Mới nhất | Cấu trúc chuẩn SEO, layout Flexbox/Grid, tương tác DOM thuần |
-| **Đồ họa 3D** | Three.js | r128 | Render khung cảnh mạng lượng tử 3D WebGL với chuyển động camera |
+| **Đồ họa 3D** | Three.js | r128 | Render khung cảnh mạng lượng tử 3D WebGL 6 nodes với chuyển động camera |
 | **Animation Engine** | GSAP & ScrollTrigger | 3.12.5 | Hiệu ứng mượt mà mở đầu (hero entrance), thanh cuộn tiến độ đọc |
 | **Scroll Reveal** | AOS (Animate on Scroll) | 2.3.4 | Xuất hiện các khối nội dung và thẻ thành viên theo trục cuộn |
-| **Typography** | Space Grotesk, JetBrains Mono, Inter, Unbounded | Google Fonts | Kiểu chữ phong cách Cyberpunk, terminal kỹ thuật và giao diện hiện đại |
+| **Typography** | Space Grotesk, JetBrains Mono, Inter, Exo 2 | Google Fonts | Kiểu chữ phong cách Cyberpunk, terminal kỹ thuật và giao diện hiện đại |
 | **Hiệu ứng chữ** | Typed.js | 2.1.0 | Hiệu ứng gõ máy điện tử đa luồng sinh động ở phần tiêu đề |
 | **Trượt trình chiếu** | Swiper.js | 11.x | Hiệu ứng 3D Coverflow xoay vòng cho danh mục dự án cá nhân |
 | **Môi trường chạy** | Node.js Static Server / Live Server | 18+ | Server cục bộ tối ưu header `no-cache`, mô phỏng chính xác môi trường nộp bài |
@@ -160,9 +179,9 @@ Dự án được xây dựng bám sát 100% barem chấm điểm của môn h�
 - [x] **#1 Header / Navbar / Banner (0.5đ):** Logo định danh, thanh điều hướng ghim mờ kính, liên kết cuộn mượt (smooth scroll) đến từng phân mục, hiển thị huy hiệu trạng thái `DEV_ONLINE` và nút liên kết `⚡ PROFIO HUB`.
 - [x] **#2 Giới thiệu bản thân (0.5đ):** Đầy đủ họ tên, avatar định dạng chuẩn, chuyên ngành CNTT UTH, mục tiêu phát triển và tuyên ngôn nghề nghiệp.
 - [x] **#3 Mục tiêu nghề nghiệp (0.5đ):** Phân chia lộ trình ngắn hạn (Short-term) và dài hạn (Long-term) rõ ràng, thực tế.
-- [x] **#4 Kỹ năng chuyên môn (0.5đ):** Hệ thống hóa kỹ năng thành các nhóm (Backend, Database, DevOps, Tools, AI) kèm thanh tiến độ trực quan tự động đổ đầy khi cuộn.
+- [x] **#4 Kỹ năng chuyên môn (0.5đ):** Hệ thống hóa kỹ năng thành các nhóm (Frontend, Backend, Database, DevOps, Tools) kèm thanh tiến độ trực quan tự động đổ đầy khi cuộn.
 - [x] **#5 Học vấn & Hoạt động (0.5đ):** Dòng thời gian (Timeline) quá trình đào tạo tại UTH, đồ án học kỳ và các chứng chỉ kỹ thuật.
-- [x] **#6 Dự án cá nhân (0.5đ):** Tối thiểu 2 dự án hoàn chỉnh (*AI Tasker* & *MiYuki Express*), kèm mô tả kiến trúc, công nghệ, hình ảnh minh họa và mã nguồn GitHub.
+- [x] **#6 Dự án cá nhân (0.5đ):** Tối thiểu 2 dự án hoàn chỉnh mỗi thành viên, kèm mô tả kiến trúc, công nghệ, hình ảnh minh họa và mã nguồn GitHub.
 - [x] **#7 Chứng chỉ & Sở thích (0.5đ):** Trình bày chứng chỉ CNTT và hoạt động ngoại khóa, tạo hình ảnh lập trình viên toàn diện.
 
 ### II. Thiết kế giao diện HTML/CSS (2.5 Điểm)
@@ -170,7 +189,7 @@ Dự án được xây dựng bám sát 100% barem chấm điểm của môn h�
 - [x] **#9 Bố cục Flexbox / Grid (0.5đ):** Tổ chức lưới hiển thị thông minh, tỷ lệ cân xứng, không dùng thuộc tính định vị tĩnh hay layout lỗi thời.
 - [x] **#10 Thẩm mỹ giao diện (0.5đ):** Thiết kế theo phong cách Futuristic Cyber Tech & Glassmorphism hiện đại, phối màu neon hài hòa, typography chuẩn quốc tế.
 - [x] **#11 Responsive đa thiết bị (0.5đ):** Thích ứng mượt mà trên các breakpoint tiêu chuẩn (Mobile `<480px`, Tablet `768px`, Laptop `1024px`, Desktop `>1200px`), không có lỗi thanh cuộn ngang.
-- [x] **#12 Hiệu ứng CSS3 (0.5đ):** Tận dụng tối đa `transition`, `transform 3D`, `@keyframes scanline`, hiệu ứng ánh sáng gradient chuyển động, hover state sắc nét.
+- [x] **#12 Hiệu ứng CSS3 (0.5đ):** Tận dụng tối đa `transition`, `transform 3D`, `@keyframes`, hiệu ứng ánh sáng gradient chuyển động, hover state sắc nét.
 
 ### III. JavaScript & Tương tác (2.0 Điểm)
 - [x] **#13 Thao tác DOM & Event Handling (0.5đ):** Quản lý trạng thái bằng JavaScript thuần, tối ưu hóa sự kiện lắng nghe (event delegation, throttling scroll/mousemove).
@@ -185,15 +204,16 @@ Dự án được xây dựng bám sát 100% barem chấm điểm của môn h�
 
 ### IV. Chất lượng bài làm (1.0 Điểm)
 - [x] **#16 Clean Code (0.3đ):** Code được thụt lề chuẩn, comment rõ ràng, phân tách biến và hằng số theo chuẩn phong cách lập trình sạch.
-- [x] **#17 Tổ chức Source Code khoa học (0.3đ):** Tách bạch rõ rệt giữa cấu trúc HTML, hệ thống CSS nhiều tầng (`variables.css`, `base.css`, `components.css`, `sections.css`, `responsive.css`) và các module JS độc lập.
-- [x] **#18 Tính cá nhân hóa cao (0.4đ):** Toàn bộ dữ liệu của 5 thành viên là thông tin thật, thể hiện dấu ấn cá nhân đậm nét.
+- [x] **#17 Tổ chức Source Code khoa học (0.3đ):** Tách bạch rõ rệt giữa cấu trúc HTML, hệ thống CSS nhiều tầng và các module JS độc lập.
+- [x] **#18 Tính cá nhân hóa cao (0.4đ):** Toàn bộ dữ liệu của 6 thành viên là thông tin thật, thể hiện dấu ấn cá nhân đậm nét.
 
 ### V. Sáng tạo độc bản (1.0 Điểm)
-- [x] **#19 Tính năng nâng cao độc đáo (1.0đ):** 
+- [x] **#19 Tính năng nâng cao độc đáo (1.0đ):**
   - Màn hình khởi tạo **Cyber Preloader** với 3 vòng lượng tử xoay đồng tâm và thanh đo tiến độ.
-  - Tích hợp không gian mạng **3D WebGL Three.js** tương tác trực tiếp theo chuyển động con trỏ.
+  - Tích hợp không gian mạng **3D WebGL Three.js** tương tác trực tiếp theo chuyển động con trỏ với 6 nodes xoay quỹ đạo.
   - Con trỏ HUD Reticle động với hiệu ứng sóng xung nhịp Neon Click Waveform.
   - Thanh đo tiến độ đọc trang (Scroll Progress Bar) gradient siêu thực.
+  - **Satellite Orbit UI** (Node 06) — menu vệ tinh xoay quanh ảnh chân dung với Liquid Wave SVG.
 
 ---
 
@@ -201,12 +221,12 @@ Dự án được xây dựng bám sát 100% barem chấm điểm của môn h�
 
 ```
 profio/
-├── index.html                  # ⚡ Cổng điều hướng chính (Landing Hub kết nối 5 Nodes)
+├── index.html                  # ⚡ Cổng điều hướng chính (Landing Hub kết nối 6 Nodes)
 ├── css/
 │   └── landing.css             # Style Cyber HUD & hiệu ứng giao diện chính
 ├── js/
 │   ├── landing.js              # Xử lý tương tác, cursor và âm thanh giao diện
-│   └── three-landing.js        # Động cơ đồ họa 3D WebGL Three.js
+│   └── three-landing.js        # Động cơ đồ họa 3D WebGL Three.js (6 orbiting nodes)
 ├── assets/
 │   └── images/
 │       └── team/               # Thư mục ảnh đại diện từng thành viên
@@ -217,7 +237,7 @@ profio/
 │   ├── js/main.js              # Script mẫu: darkmode, tabs, modal, validation
 │   └── assets/                 # Thư mục ảnh và animation mẫu
 │
-├── members/                    # 👥 Không gian Portfolio riêng của 5 thành viên
+├── members/                    # 👥 Không gian Portfolio riêng của 6 thành viên
 │   ├── khang/                  # 👨‍💻 Node 01 — Nguyễn Thiên Khang (Lead)
 │   │   ├── index.html          # Portfolio cá nhân chuyên sâu Java Backend
 │   │   ├── css/                # 5 files CSS module hóa (variables, base, components,...)
@@ -242,13 +262,27 @@ profio/
 │   │   ├── js/                 # Script chuyển động typing và drawer menu
 │   │   └── images/             # Ảnh đại diện cá nhân
 │   │
-│   └── quynhnhu/               # 👤 Node 05 — Nguyễn Quỳnh Như
-│       ├── index.html          # Portfolio phong cách Game Dev & Cyber Glassmorphism
-│       ├── css/                # Hệ thống CSS Cyberpunk tương tác
-│       ├── js/                 # Script xử lý Swiper và animation
-│       └── assets/images/      # Hình ảnh dự án và avatar
+│   ├── quynhnhu/               # 👤 Node 05 — Nguyễn Quỳnh Như
+│   │   ├── index.html          # Portfolio phong cách Game Dev & Cyber Glassmorphism
+│   │   ├── css/                # Hệ thống CSS Cyberpunk tương tác
+│   │   ├── js/                 # Script xử lý Swiper và animation
+│   │   └── assets/images/      # Hình ảnh dự án và avatar
+│   │
+│   └── dinhhai/                # 👤 Node 06 — Bùi Đình Hải
+│       ├── index.html          # Portfolio phong cách Satellite Orbit & Liquid Wave
+│       ├── assets/
+│       │   ├── css/            # styles.css & animations.css
+│       │   ├── js/             # orbit.js, liquid.js, popup.js, config.js,...
+│       │   ├── fonts/          # Exo 2 font (offline, woff2)
+│       │   ├── icons/          # SVG icons công nghệ
+│       │   └── images/         # Ảnh chân dung, gallery ảnh cá nhân
+│       ├── config/
+│       │   ├── site.json       # Cấu hình màu sắc, animation, tên
+│       │   └── menu.json       # Danh sách các mục satellite menu
+│       └── content/            # HTML nội dung từng popup (about, skills, projects,...)
 │
 ├── server.js                   # Node.js HTTP server chống cache cho môi trường dev
+├── GUIDE.md                    # 📋 Hướng dẫn kỹ thuật & checklist 19 tiêu chí
 ├── README.md                   # 📄 Tài liệu tổng quan dự án (File này)
 └── .gitignore                  # Cấu hình loại trừ file rác hệ thống & temporary cache
 ```
@@ -288,7 +322,7 @@ Repository được cấu hình để triển khai tự động qua **GitHub Pag
 1. Đẩy toàn bộ mã nguồn lên nhánh chính `main` của repository trên GitHub:
    ```bash
    git add .
-   git commit -m "feat: complete Profio ecosystem with 5 active nodes and modernized UI"
+   git commit -m "feat: complete Profio ecosystem with 6 active nodes"
    git push origin main
    ```
 2. Truy cập vào **Settings** của repository trên GitHub (`https://github.com/NguyenThienKhangWork/Profio/settings/pages`).
@@ -305,6 +339,6 @@ Repository được cấu hình để triển khai tự động qua **GitHub Pag
 
 ## 📜 Giấy Phép & Bản Quyền
 
-Dự án được xây dựng và duy trì bởi nhóm 5 sinh viên Khoa Công nghệ Thông tin — **Trường Đại học Giao thông Vận tải TP.HCM (UTH)** phục vụ mục đích học thuật và đánh giá kết quả học phần Lập trình Web.
+Dự án được xây dựng và duy trì bởi nhóm **6 sinh viên** Khoa Công nghệ Thông tin — **Trường Đại học Giao thông Vận tải TP.HCM (UTH)** phục vụ mục đích học thuật và đánh giá kết quả học phần Lập trình Web.
 
 *© 2026 Profio Team — UTH Information Technology. All rights reserved.*
